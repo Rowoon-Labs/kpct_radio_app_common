@@ -1,39 +1,32 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# kpct_radio_app_common
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+KPCT Radio 프로젝트의 공통 로직 및 데이터 모델을 담고 있는 패키지입니다.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+## 포함 사항
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+- 공통 데이터 모델 (Freezed/JSON Serializable)
+- API 서비스 및 데이터베이스 유틸리티 (Dio, Firestore)
+- 프로젝트 전반에서 사용되는 상수 및 유틸리티 함수
 
-## Features
+## 사용 방법
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+메인 앱의 `pubspec.yaml`에 아래와 같이 추가하여 사용합니다.
 
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+    kpct_radio_app_common:
+        path: ../kpct_radio_app_common
 ```
 
-## Additional information
+## 개발 참고
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+이 패키지는 코드 생성기(`build_runner`)를 사용합니다. 모델 변경 후 아래 명령어를
+실행하세요.
+
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+## 라이선스
+
+MIT License. 상세 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
