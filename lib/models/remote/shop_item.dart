@@ -27,11 +27,11 @@ class ShopItem with _$ShopItem {
     required String documentId,
     @StringToShopItemIdConverter() @JsonKey(name: "ID") required ShopItemId id,
     @StringToIntConverter() @JsonKey(name: "cost_EP") required int costEp,
-    @JsonKey(name: "name") required String name,
-    @JsonKey(name: "icon") required String icon,
+    @JsonKey(name: "name") String? name,
+    @JsonKey(name: "icon") String? icon,
     @StringToIntConverter() @JsonKey(name: "buy_Limit") required int buyLimit,
     @StringToIntConverter() @JsonKey(name: "cost_SSP") required int costSsp,
-    @JsonKey(name: "desc") required String desc,
+    @JsonKey(name: "desc") String? desc,
     @JsonKey(name: "effectDuration", defaultValue: null)
     @SecondConverterFromStringNullable()
     @protected

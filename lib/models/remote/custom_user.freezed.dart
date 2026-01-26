@@ -12,7 +12,8 @@ part of 'custom_user.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 CustomUser _$CustomUserFromJson(Map<String, dynamic> json) {
   return _CustomUser.fromJson(json);
@@ -68,37 +69,39 @@ mixin _$CustomUser {
 /// @nodoc
 abstract class $CustomUserCopyWith<$Res> {
   factory $CustomUserCopyWith(
-          CustomUser value, $Res Function(CustomUser) then) =
-      _$CustomUserCopyWithImpl<$Res, CustomUser>;
+    CustomUser value,
+    $Res Function(CustomUser) then,
+  ) = _$CustomUserCopyWithImpl<$Res, CustomUser>;
   @useResult
-  $Res call(
-      {String id,
-      bool bonded,
-      CustomUserRole role,
-      String? profileImageUrl,
-      String email,
-      @TimestampConverter() DateTime createdAt,
-      String? walletAddress,
-      int level,
-      int stamina,
-      @protected int maxStamina,
-      int consumedStamina,
-      double exp,
-      double maxExp,
-      int listeningGauge,
-      int ep,
-      int accumulatedEp,
-      @SecondConverter() Duration accumulatedPlayDuration,
-      int radioSsp,
-      int accumulatedRadioSsp,
-      int hodSsp,
-      String? referralCode,
-      Map<GearCategory, InstalledEquipment?> installedEquipments,
-      @TimestampConverter() DateTime nextRandomBoxAt,
-      @TimestampConverter() DateTime? nextPeriodic12,
-      @TimestampConverter() DateTime? nextPeriodic24,
-      List<int> overcomeLevels,
-      List<Item> items});
+  $Res call({
+    String id,
+    bool bonded,
+    CustomUserRole role,
+    String? profileImageUrl,
+    String email,
+    @TimestampConverter() DateTime createdAt,
+    String? walletAddress,
+    int level,
+    int stamina,
+    @protected int maxStamina,
+    int consumedStamina,
+    double exp,
+    double maxExp,
+    int listeningGauge,
+    int ep,
+    int accumulatedEp,
+    @SecondConverter() Duration accumulatedPlayDuration,
+    int radioSsp,
+    int accumulatedRadioSsp,
+    int hodSsp,
+    String? referralCode,
+    Map<GearCategory, InstalledEquipment?> installedEquipments,
+    @TimestampConverter() DateTime nextRandomBoxAt,
+    @TimestampConverter() DateTime? nextPeriodic12,
+    @TimestampConverter() DateTime? nextPeriodic24,
+    List<int> overcomeLevels,
+    List<Item> items,
+  });
 }
 
 /// @nodoc
@@ -144,116 +147,146 @@ class _$CustomUserCopyWithImpl<$Res, $Val extends CustomUser>
     Object? overcomeLevels = null,
     Object? items = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      bonded: null == bonded
-          ? _value.bonded
-          : bonded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      role: null == role
-          ? _value.role
-          : role // ignore: cast_nullable_to_non_nullable
-              as CustomUserRole,
-      profileImageUrl: freezed == profileImageUrl
-          ? _value.profileImageUrl
-          : profileImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      walletAddress: freezed == walletAddress
-          ? _value.walletAddress
-          : walletAddress // ignore: cast_nullable_to_non_nullable
-              as String?,
-      level: null == level
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as int,
-      stamina: null == stamina
-          ? _value.stamina
-          : stamina // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxStamina: null == maxStamina
-          ? _value.maxStamina
-          : maxStamina // ignore: cast_nullable_to_non_nullable
-              as int,
-      consumedStamina: null == consumedStamina
-          ? _value.consumedStamina
-          : consumedStamina // ignore: cast_nullable_to_non_nullable
-              as int,
-      exp: null == exp
-          ? _value.exp
-          : exp // ignore: cast_nullable_to_non_nullable
-              as double,
-      maxExp: null == maxExp
-          ? _value.maxExp
-          : maxExp // ignore: cast_nullable_to_non_nullable
-              as double,
-      listeningGauge: null == listeningGauge
-          ? _value.listeningGauge
-          : listeningGauge // ignore: cast_nullable_to_non_nullable
-              as int,
-      ep: null == ep
-          ? _value.ep
-          : ep // ignore: cast_nullable_to_non_nullable
-              as int,
-      accumulatedEp: null == accumulatedEp
-          ? _value.accumulatedEp
-          : accumulatedEp // ignore: cast_nullable_to_non_nullable
-              as int,
-      accumulatedPlayDuration: null == accumulatedPlayDuration
-          ? _value.accumulatedPlayDuration
-          : accumulatedPlayDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      radioSsp: null == radioSsp
-          ? _value.radioSsp
-          : radioSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      accumulatedRadioSsp: null == accumulatedRadioSsp
-          ? _value.accumulatedRadioSsp
-          : accumulatedRadioSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      hodSsp: null == hodSsp
-          ? _value.hodSsp
-          : hodSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      referralCode: freezed == referralCode
-          ? _value.referralCode
-          : referralCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      installedEquipments: null == installedEquipments
-          ? _value.installedEquipments
-          : installedEquipments // ignore: cast_nullable_to_non_nullable
-              as Map<GearCategory, InstalledEquipment?>,
-      nextRandomBoxAt: null == nextRandomBoxAt
-          ? _value.nextRandomBoxAt
-          : nextRandomBoxAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      nextPeriodic12: freezed == nextPeriodic12
-          ? _value.nextPeriodic12
-          : nextPeriodic12 // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      nextPeriodic24: freezed == nextPeriodic24
-          ? _value.nextPeriodic24
-          : nextPeriodic24 // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      overcomeLevels: null == overcomeLevels
-          ? _value.overcomeLevels
-          : overcomeLevels // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-      items: null == items
-          ? _value.items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<Item>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            bonded:
+                null == bonded
+                    ? _value.bonded
+                    : bonded // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            role:
+                null == role
+                    ? _value.role
+                    : role // ignore: cast_nullable_to_non_nullable
+                        as CustomUserRole,
+            profileImageUrl:
+                freezed == profileImageUrl
+                    ? _value.profileImageUrl
+                    : profileImageUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            email:
+                null == email
+                    ? _value.email
+                    : email // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            walletAddress:
+                freezed == walletAddress
+                    ? _value.walletAddress
+                    : walletAddress // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            level:
+                null == level
+                    ? _value.level
+                    : level // ignore: cast_nullable_to_non_nullable
+                        as int,
+            stamina:
+                null == stamina
+                    ? _value.stamina
+                    : stamina // ignore: cast_nullable_to_non_nullable
+                        as int,
+            maxStamina:
+                null == maxStamina
+                    ? _value.maxStamina
+                    : maxStamina // ignore: cast_nullable_to_non_nullable
+                        as int,
+            consumedStamina:
+                null == consumedStamina
+                    ? _value.consumedStamina
+                    : consumedStamina // ignore: cast_nullable_to_non_nullable
+                        as int,
+            exp:
+                null == exp
+                    ? _value.exp
+                    : exp // ignore: cast_nullable_to_non_nullable
+                        as double,
+            maxExp:
+                null == maxExp
+                    ? _value.maxExp
+                    : maxExp // ignore: cast_nullable_to_non_nullable
+                        as double,
+            listeningGauge:
+                null == listeningGauge
+                    ? _value.listeningGauge
+                    : listeningGauge // ignore: cast_nullable_to_non_nullable
+                        as int,
+            ep:
+                null == ep
+                    ? _value.ep
+                    : ep // ignore: cast_nullable_to_non_nullable
+                        as int,
+            accumulatedEp:
+                null == accumulatedEp
+                    ? _value.accumulatedEp
+                    : accumulatedEp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            accumulatedPlayDuration:
+                null == accumulatedPlayDuration
+                    ? _value.accumulatedPlayDuration
+                    : accumulatedPlayDuration // ignore: cast_nullable_to_non_nullable
+                        as Duration,
+            radioSsp:
+                null == radioSsp
+                    ? _value.radioSsp
+                    : radioSsp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            accumulatedRadioSsp:
+                null == accumulatedRadioSsp
+                    ? _value.accumulatedRadioSsp
+                    : accumulatedRadioSsp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            hodSsp:
+                null == hodSsp
+                    ? _value.hodSsp
+                    : hodSsp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            referralCode:
+                freezed == referralCode
+                    ? _value.referralCode
+                    : referralCode // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            installedEquipments:
+                null == installedEquipments
+                    ? _value.installedEquipments
+                    : installedEquipments // ignore: cast_nullable_to_non_nullable
+                        as Map<GearCategory, InstalledEquipment?>,
+            nextRandomBoxAt:
+                null == nextRandomBoxAt
+                    ? _value.nextRandomBoxAt
+                    : nextRandomBoxAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            nextPeriodic12:
+                freezed == nextPeriodic12
+                    ? _value.nextPeriodic12
+                    : nextPeriodic12 // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            nextPeriodic24:
+                freezed == nextPeriodic24
+                    ? _value.nextPeriodic24
+                    : nextPeriodic24 // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            overcomeLevels:
+                null == overcomeLevels
+                    ? _value.overcomeLevels
+                    : overcomeLevels // ignore: cast_nullable_to_non_nullable
+                        as List<int>,
+            items:
+                null == items
+                    ? _value.items
+                    : items // ignore: cast_nullable_to_non_nullable
+                        as List<Item>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -261,38 +294,40 @@ class _$CustomUserCopyWithImpl<$Res, $Val extends CustomUser>
 abstract class _$$CustomUserImplCopyWith<$Res>
     implements $CustomUserCopyWith<$Res> {
   factory _$$CustomUserImplCopyWith(
-          _$CustomUserImpl value, $Res Function(_$CustomUserImpl) then) =
-      __$$CustomUserImplCopyWithImpl<$Res>;
+    _$CustomUserImpl value,
+    $Res Function(_$CustomUserImpl) then,
+  ) = __$$CustomUserImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      bool bonded,
-      CustomUserRole role,
-      String? profileImageUrl,
-      String email,
-      @TimestampConverter() DateTime createdAt,
-      String? walletAddress,
-      int level,
-      int stamina,
-      @protected int maxStamina,
-      int consumedStamina,
-      double exp,
-      double maxExp,
-      int listeningGauge,
-      int ep,
-      int accumulatedEp,
-      @SecondConverter() Duration accumulatedPlayDuration,
-      int radioSsp,
-      int accumulatedRadioSsp,
-      int hodSsp,
-      String? referralCode,
-      Map<GearCategory, InstalledEquipment?> installedEquipments,
-      @TimestampConverter() DateTime nextRandomBoxAt,
-      @TimestampConverter() DateTime? nextPeriodic12,
-      @TimestampConverter() DateTime? nextPeriodic24,
-      List<int> overcomeLevels,
-      List<Item> items});
+  $Res call({
+    String id,
+    bool bonded,
+    CustomUserRole role,
+    String? profileImageUrl,
+    String email,
+    @TimestampConverter() DateTime createdAt,
+    String? walletAddress,
+    int level,
+    int stamina,
+    @protected int maxStamina,
+    int consumedStamina,
+    double exp,
+    double maxExp,
+    int listeningGauge,
+    int ep,
+    int accumulatedEp,
+    @SecondConverter() Duration accumulatedPlayDuration,
+    int radioSsp,
+    int accumulatedRadioSsp,
+    int hodSsp,
+    String? referralCode,
+    Map<GearCategory, InstalledEquipment?> installedEquipments,
+    @TimestampConverter() DateTime nextRandomBoxAt,
+    @TimestampConverter() DateTime? nextPeriodic12,
+    @TimestampConverter() DateTime? nextPeriodic24,
+    List<int> overcomeLevels,
+    List<Item> items,
+  });
 }
 
 /// @nodoc
@@ -300,8 +335,9 @@ class __$$CustomUserImplCopyWithImpl<$Res>
     extends _$CustomUserCopyWithImpl<$Res, _$CustomUserImpl>
     implements _$$CustomUserImplCopyWith<$Res> {
   __$$CustomUserImplCopyWithImpl(
-      _$CustomUserImpl _value, $Res Function(_$CustomUserImpl) _then)
-      : super(_value, _then);
+    _$CustomUserImpl _value,
+    $Res Function(_$CustomUserImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CustomUser
   /// with the given fields replaced by the non-null parameter values.
@@ -336,154 +372,183 @@ class __$$CustomUserImplCopyWithImpl<$Res>
     Object? overcomeLevels = null,
     Object? items = null,
   }) {
-    return _then(_$CustomUserImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      bonded: null == bonded
-          ? _value.bonded
-          : bonded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      role: null == role
-          ? _value.role
-          : role // ignore: cast_nullable_to_non_nullable
-              as CustomUserRole,
-      profileImageUrl: freezed == profileImageUrl
-          ? _value.profileImageUrl
-          : profileImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      walletAddress: freezed == walletAddress
-          ? _value.walletAddress
-          : walletAddress // ignore: cast_nullable_to_non_nullable
-              as String?,
-      level: null == level
-          ? _value.level
-          : level // ignore: cast_nullable_to_non_nullable
-              as int,
-      stamina: null == stamina
-          ? _value.stamina
-          : stamina // ignore: cast_nullable_to_non_nullable
-              as int,
-      maxStamina: null == maxStamina
-          ? _value.maxStamina
-          : maxStamina // ignore: cast_nullable_to_non_nullable
-              as int,
-      consumedStamina: null == consumedStamina
-          ? _value.consumedStamina
-          : consumedStamina // ignore: cast_nullable_to_non_nullable
-              as int,
-      exp: null == exp
-          ? _value.exp
-          : exp // ignore: cast_nullable_to_non_nullable
-              as double,
-      maxExp: null == maxExp
-          ? _value.maxExp
-          : maxExp // ignore: cast_nullable_to_non_nullable
-              as double,
-      listeningGauge: null == listeningGauge
-          ? _value.listeningGauge
-          : listeningGauge // ignore: cast_nullable_to_non_nullable
-              as int,
-      ep: null == ep
-          ? _value.ep
-          : ep // ignore: cast_nullable_to_non_nullable
-              as int,
-      accumulatedEp: null == accumulatedEp
-          ? _value.accumulatedEp
-          : accumulatedEp // ignore: cast_nullable_to_non_nullable
-              as int,
-      accumulatedPlayDuration: null == accumulatedPlayDuration
-          ? _value.accumulatedPlayDuration
-          : accumulatedPlayDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      radioSsp: null == radioSsp
-          ? _value.radioSsp
-          : radioSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      accumulatedRadioSsp: null == accumulatedRadioSsp
-          ? _value.accumulatedRadioSsp
-          : accumulatedRadioSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      hodSsp: null == hodSsp
-          ? _value.hodSsp
-          : hodSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      referralCode: freezed == referralCode
-          ? _value.referralCode
-          : referralCode // ignore: cast_nullable_to_non_nullable
-              as String?,
-      installedEquipments: null == installedEquipments
-          ? _value._installedEquipments
-          : installedEquipments // ignore: cast_nullable_to_non_nullable
-              as Map<GearCategory, InstalledEquipment?>,
-      nextRandomBoxAt: null == nextRandomBoxAt
-          ? _value.nextRandomBoxAt
-          : nextRandomBoxAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      nextPeriodic12: freezed == nextPeriodic12
-          ? _value.nextPeriodic12
-          : nextPeriodic12 // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      nextPeriodic24: freezed == nextPeriodic24
-          ? _value.nextPeriodic24
-          : nextPeriodic24 // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      overcomeLevels: null == overcomeLevels
-          ? _value._overcomeLevels
-          : overcomeLevels // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-      items: null == items
-          ? _value._items
-          : items // ignore: cast_nullable_to_non_nullable
-              as List<Item>,
-    ));
+    return _then(
+      _$CustomUserImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        bonded:
+            null == bonded
+                ? _value.bonded
+                : bonded // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        role:
+            null == role
+                ? _value.role
+                : role // ignore: cast_nullable_to_non_nullable
+                    as CustomUserRole,
+        profileImageUrl:
+            freezed == profileImageUrl
+                ? _value.profileImageUrl
+                : profileImageUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        email:
+            null == email
+                ? _value.email
+                : email // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        walletAddress:
+            freezed == walletAddress
+                ? _value.walletAddress
+                : walletAddress // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        level:
+            null == level
+                ? _value.level
+                : level // ignore: cast_nullable_to_non_nullable
+                    as int,
+        stamina:
+            null == stamina
+                ? _value.stamina
+                : stamina // ignore: cast_nullable_to_non_nullable
+                    as int,
+        maxStamina:
+            null == maxStamina
+                ? _value.maxStamina
+                : maxStamina // ignore: cast_nullable_to_non_nullable
+                    as int,
+        consumedStamina:
+            null == consumedStamina
+                ? _value.consumedStamina
+                : consumedStamina // ignore: cast_nullable_to_non_nullable
+                    as int,
+        exp:
+            null == exp
+                ? _value.exp
+                : exp // ignore: cast_nullable_to_non_nullable
+                    as double,
+        maxExp:
+            null == maxExp
+                ? _value.maxExp
+                : maxExp // ignore: cast_nullable_to_non_nullable
+                    as double,
+        listeningGauge:
+            null == listeningGauge
+                ? _value.listeningGauge
+                : listeningGauge // ignore: cast_nullable_to_non_nullable
+                    as int,
+        ep:
+            null == ep
+                ? _value.ep
+                : ep // ignore: cast_nullable_to_non_nullable
+                    as int,
+        accumulatedEp:
+            null == accumulatedEp
+                ? _value.accumulatedEp
+                : accumulatedEp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        accumulatedPlayDuration:
+            null == accumulatedPlayDuration
+                ? _value.accumulatedPlayDuration
+                : accumulatedPlayDuration // ignore: cast_nullable_to_non_nullable
+                    as Duration,
+        radioSsp:
+            null == radioSsp
+                ? _value.radioSsp
+                : radioSsp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        accumulatedRadioSsp:
+            null == accumulatedRadioSsp
+                ? _value.accumulatedRadioSsp
+                : accumulatedRadioSsp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        hodSsp:
+            null == hodSsp
+                ? _value.hodSsp
+                : hodSsp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        referralCode:
+            freezed == referralCode
+                ? _value.referralCode
+                : referralCode // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        installedEquipments:
+            null == installedEquipments
+                ? _value._installedEquipments
+                : installedEquipments // ignore: cast_nullable_to_non_nullable
+                    as Map<GearCategory, InstalledEquipment?>,
+        nextRandomBoxAt:
+            null == nextRandomBoxAt
+                ? _value.nextRandomBoxAt
+                : nextRandomBoxAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        nextPeriodic12:
+            freezed == nextPeriodic12
+                ? _value.nextPeriodic12
+                : nextPeriodic12 // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        nextPeriodic24:
+            freezed == nextPeriodic24
+                ? _value.nextPeriodic24
+                : nextPeriodic24 // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        overcomeLevels:
+            null == overcomeLevels
+                ? _value._overcomeLevels
+                : overcomeLevels // ignore: cast_nullable_to_non_nullable
+                    as List<int>,
+        items:
+            null == items
+                ? _value._items
+                : items // ignore: cast_nullable_to_non_nullable
+                    as List<Item>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$CustomUserImpl extends _CustomUser {
-  const _$CustomUserImpl(
-      {required this.id,
-      required this.bonded,
-      required this.role,
-      required this.profileImageUrl,
-      required this.email,
-      @TimestampConverter() required this.createdAt,
-      required this.walletAddress,
-      required this.level,
-      required this.stamina,
-      @protected required this.maxStamina,
-      required this.consumedStamina,
-      required this.exp,
-      required this.maxExp,
-      required this.listeningGauge,
-      required this.ep,
-      required this.accumulatedEp,
-      @SecondConverter() required this.accumulatedPlayDuration,
-      required this.radioSsp,
-      required this.accumulatedRadioSsp,
-      required this.hodSsp,
-      required this.referralCode,
-      required final Map<GearCategory, InstalledEquipment?> installedEquipments,
-      @TimestampConverter() required this.nextRandomBoxAt,
-      @TimestampConverter() required this.nextPeriodic12,
-      @TimestampConverter() required this.nextPeriodic24,
-      required final List<int> overcomeLevels,
-      required final List<Item> items})
-      : _installedEquipments = installedEquipments,
-        _overcomeLevels = overcomeLevels,
-        _items = items,
-        super._();
+  const _$CustomUserImpl({
+    required this.id,
+    required this.bonded,
+    required this.role,
+    required this.profileImageUrl,
+    required this.email,
+    @TimestampConverter() required this.createdAt,
+    required this.walletAddress,
+    required this.level,
+    required this.stamina,
+    @protected required this.maxStamina,
+    required this.consumedStamina,
+    required this.exp,
+    required this.maxExp,
+    required this.listeningGauge,
+    required this.ep,
+    required this.accumulatedEp,
+    @SecondConverter() required this.accumulatedPlayDuration,
+    required this.radioSsp,
+    required this.accumulatedRadioSsp,
+    required this.hodSsp,
+    required this.referralCode,
+    required final Map<GearCategory, InstalledEquipment?> installedEquipments,
+    @TimestampConverter() required this.nextRandomBoxAt,
+    @TimestampConverter() required this.nextPeriodic12,
+    @TimestampConverter() required this.nextPeriodic24,
+    required final List<int> overcomeLevels,
+    required final List<Item> items,
+  }) : _installedEquipments = installedEquipments,
+       _overcomeLevels = overcomeLevels,
+       _items = items,
+       super._();
 
   factory _$CustomUserImpl.fromJson(Map<String, dynamic> json) =>
       _$$CustomUserImplFromJson(json);
@@ -601,7 +666,9 @@ class _$CustomUserImpl extends _CustomUser {
             (identical(other.accumulatedEp, accumulatedEp) ||
                 other.accumulatedEp == accumulatedEp) &&
             (identical(
-                    other.accumulatedPlayDuration, accumulatedPlayDuration) ||
+                  other.accumulatedPlayDuration,
+                  accumulatedPlayDuration,
+                ) ||
                 other.accumulatedPlayDuration == accumulatedPlayDuration) &&
             (identical(other.radioSsp, radioSsp) ||
                 other.radioSsp == radioSsp) &&
@@ -610,51 +677,55 @@ class _$CustomUserImpl extends _CustomUser {
             (identical(other.hodSsp, hodSsp) || other.hodSsp == hodSsp) &&
             (identical(other.referralCode, referralCode) ||
                 other.referralCode == referralCode) &&
-            const DeepCollectionEquality()
-                .equals(other._installedEquipments, _installedEquipments) &&
+            const DeepCollectionEquality().equals(
+              other._installedEquipments,
+              _installedEquipments,
+            ) &&
             (identical(other.nextRandomBoxAt, nextRandomBoxAt) ||
                 other.nextRandomBoxAt == nextRandomBoxAt) &&
             (identical(other.nextPeriodic12, nextPeriodic12) ||
                 other.nextPeriodic12 == nextPeriodic12) &&
             (identical(other.nextPeriodic24, nextPeriodic24) ||
                 other.nextPeriodic24 == nextPeriodic24) &&
-            const DeepCollectionEquality()
-                .equals(other._overcomeLevels, _overcomeLevels) &&
+            const DeepCollectionEquality().equals(
+              other._overcomeLevels,
+              _overcomeLevels,
+            ) &&
             const DeepCollectionEquality().equals(other._items, _items));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        bonded,
-        role,
-        profileImageUrl,
-        email,
-        createdAt,
-        walletAddress,
-        level,
-        stamina,
-        maxStamina,
-        consumedStamina,
-        exp,
-        maxExp,
-        listeningGauge,
-        ep,
-        accumulatedEp,
-        accumulatedPlayDuration,
-        radioSsp,
-        accumulatedRadioSsp,
-        hodSsp,
-        referralCode,
-        const DeepCollectionEquality().hash(_installedEquipments),
-        nextRandomBoxAt,
-        nextPeriodic12,
-        nextPeriodic24,
-        const DeepCollectionEquality().hash(_overcomeLevels),
-        const DeepCollectionEquality().hash(_items)
-      ]);
+    runtimeType,
+    id,
+    bonded,
+    role,
+    profileImageUrl,
+    email,
+    createdAt,
+    walletAddress,
+    level,
+    stamina,
+    maxStamina,
+    consumedStamina,
+    exp,
+    maxExp,
+    listeningGauge,
+    ep,
+    accumulatedEp,
+    accumulatedPlayDuration,
+    radioSsp,
+    accumulatedRadioSsp,
+    hodSsp,
+    referralCode,
+    const DeepCollectionEquality().hash(_installedEquipments),
+    nextRandomBoxAt,
+    nextPeriodic12,
+    nextPeriodic24,
+    const DeepCollectionEquality().hash(_overcomeLevels),
+    const DeepCollectionEquality().hash(_items),
+  ]);
 
   /// Create a copy of CustomUser
   /// with the given fields replaced by the non-null parameter values.
@@ -666,41 +737,40 @@ class _$CustomUserImpl extends _CustomUser {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CustomUserImplToJson(
-      this,
-    );
+    return _$$CustomUserImplToJson(this);
   }
 }
 
 abstract class _CustomUser extends CustomUser {
-  const factory _CustomUser(
-      {required final String id,
-      required final bool bonded,
-      required final CustomUserRole role,
-      required final String? profileImageUrl,
-      required final String email,
-      @TimestampConverter() required final DateTime createdAt,
-      required final String? walletAddress,
-      required final int level,
-      required final int stamina,
-      @protected required final int maxStamina,
-      required final int consumedStamina,
-      required final double exp,
-      required final double maxExp,
-      required final int listeningGauge,
-      required final int ep,
-      required final int accumulatedEp,
-      @SecondConverter() required final Duration accumulatedPlayDuration,
-      required final int radioSsp,
-      required final int accumulatedRadioSsp,
-      required final int hodSsp,
-      required final String? referralCode,
-      required final Map<GearCategory, InstalledEquipment?> installedEquipments,
-      @TimestampConverter() required final DateTime nextRandomBoxAt,
-      @TimestampConverter() required final DateTime? nextPeriodic12,
-      @TimestampConverter() required final DateTime? nextPeriodic24,
-      required final List<int> overcomeLevels,
-      required final List<Item> items}) = _$CustomUserImpl;
+  const factory _CustomUser({
+    required final String id,
+    required final bool bonded,
+    required final CustomUserRole role,
+    required final String? profileImageUrl,
+    required final String email,
+    @TimestampConverter() required final DateTime createdAt,
+    required final String? walletAddress,
+    required final int level,
+    required final int stamina,
+    @protected required final int maxStamina,
+    required final int consumedStamina,
+    required final double exp,
+    required final double maxExp,
+    required final int listeningGauge,
+    required final int ep,
+    required final int accumulatedEp,
+    @SecondConverter() required final Duration accumulatedPlayDuration,
+    required final int radioSsp,
+    required final int accumulatedRadioSsp,
+    required final int hodSsp,
+    required final String? referralCode,
+    required final Map<GearCategory, InstalledEquipment?> installedEquipments,
+    @TimestampConverter() required final DateTime nextRandomBoxAt,
+    @TimestampConverter() required final DateTime? nextPeriodic12,
+    @TimestampConverter() required final DateTime? nextPeriodic24,
+    required final List<int> overcomeLevels,
+    required final List<Item> items,
+  }) = _$CustomUserImpl;
   const _CustomUser._() : super._();
 
   factory _CustomUser.fromJson(Map<String, dynamic> json) =
@@ -802,11 +872,12 @@ abstract class $ItemCopyWith<$Res> {
   factory $ItemCopyWith(Item value, $Res Function(Item) then) =
       _$ItemCopyWithImpl<$Res, Item>;
   @useResult
-  $Res call(
-      {ShopItemId id,
-      int todayBuyCount,
-      @TimestampConverter() DateTime lastBuyAt,
-      @TimestampConverter() DateTime? effectEndAt});
+  $Res call({
+    ShopItemId id,
+    int todayBuyCount,
+    @TimestampConverter() DateTime lastBuyAt,
+    @TimestampConverter() DateTime? effectEndAt,
+  });
 }
 
 /// @nodoc
@@ -829,39 +900,48 @@ class _$ItemCopyWithImpl<$Res, $Val extends Item>
     Object? lastBuyAt = null,
     Object? effectEndAt = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as ShopItemId,
-      todayBuyCount: null == todayBuyCount
-          ? _value.todayBuyCount
-          : todayBuyCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      lastBuyAt: null == lastBuyAt
-          ? _value.lastBuyAt
-          : lastBuyAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      effectEndAt: freezed == effectEndAt
-          ? _value.effectEndAt
-          : effectEndAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as ShopItemId,
+            todayBuyCount:
+                null == todayBuyCount
+                    ? _value.todayBuyCount
+                    : todayBuyCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            lastBuyAt:
+                null == lastBuyAt
+                    ? _value.lastBuyAt
+                    : lastBuyAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            effectEndAt:
+                freezed == effectEndAt
+                    ? _value.effectEndAt
+                    : effectEndAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ItemImplCopyWith<$Res> implements $ItemCopyWith<$Res> {
   factory _$$ItemImplCopyWith(
-          _$ItemImpl value, $Res Function(_$ItemImpl) then) =
-      __$$ItemImplCopyWithImpl<$Res>;
+    _$ItemImpl value,
+    $Res Function(_$ItemImpl) then,
+  ) = __$$ItemImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ShopItemId id,
-      int todayBuyCount,
-      @TimestampConverter() DateTime lastBuyAt,
-      @TimestampConverter() DateTime? effectEndAt});
+  $Res call({
+    ShopItemId id,
+    int todayBuyCount,
+    @TimestampConverter() DateTime lastBuyAt,
+    @TimestampConverter() DateTime? effectEndAt,
+  });
 }
 
 /// @nodoc
@@ -869,7 +949,7 @@ class __$$ItemImplCopyWithImpl<$Res>
     extends _$ItemCopyWithImpl<$Res, _$ItemImpl>
     implements _$$ItemImplCopyWith<$Res> {
   __$$ItemImplCopyWithImpl(_$ItemImpl _value, $Res Function(_$ItemImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of Item
   /// with the given fields replaced by the non-null parameter values.
@@ -881,36 +961,42 @@ class __$$ItemImplCopyWithImpl<$Res>
     Object? lastBuyAt = null,
     Object? effectEndAt = freezed,
   }) {
-    return _then(_$ItemImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as ShopItemId,
-      todayBuyCount: null == todayBuyCount
-          ? _value.todayBuyCount
-          : todayBuyCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      lastBuyAt: null == lastBuyAt
-          ? _value.lastBuyAt
-          : lastBuyAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      effectEndAt: freezed == effectEndAt
-          ? _value.effectEndAt
-          : effectEndAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-    ));
+    return _then(
+      _$ItemImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as ShopItemId,
+        todayBuyCount:
+            null == todayBuyCount
+                ? _value.todayBuyCount
+                : todayBuyCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        lastBuyAt:
+            null == lastBuyAt
+                ? _value.lastBuyAt
+                : lastBuyAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        effectEndAt:
+            freezed == effectEndAt
+                ? _value.effectEndAt
+                : effectEndAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ItemImpl extends _Item {
-  const _$ItemImpl(
-      {required this.id,
-      required this.todayBuyCount,
-      @TimestampConverter() required this.lastBuyAt,
-      @TimestampConverter() this.effectEndAt = null})
-      : super._();
+  const _$ItemImpl({
+    required this.id,
+    required this.todayBuyCount,
+    @TimestampConverter() required this.lastBuyAt,
+    @TimestampConverter() this.effectEndAt = null,
+  }) : super._();
 
   factory _$ItemImpl.fromJson(Map<String, dynamic> json) =>
       _$$ItemImplFromJson(json);
@@ -961,18 +1047,17 @@ class _$ItemImpl extends _Item {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ItemImplToJson(
-      this,
-    );
+    return _$$ItemImplToJson(this);
   }
 }
 
 abstract class _Item extends Item {
-  const factory _Item(
-      {required final ShopItemId id,
-      required final int todayBuyCount,
-      @TimestampConverter() required final DateTime lastBuyAt,
-      @TimestampConverter() final DateTime? effectEndAt}) = _$ItemImpl;
+  const factory _Item({
+    required final ShopItemId id,
+    required final int todayBuyCount,
+    @TimestampConverter() required final DateTime lastBuyAt,
+    @TimestampConverter() final DateTime? effectEndAt,
+  }) = _$ItemImpl;
   const _Item._() : super._();
 
   factory _Item.fromJson(Map<String, dynamic> json) = _$ItemImpl.fromJson;
@@ -1002,7 +1087,7 @@ InstalledEquipment _$InstalledEquipmentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$InstalledEquipment {
-// Equipment
+  // Equipment
   @JsonKey(name: "equipmentId")
   String get equipmentId => throw _privateConstructorUsedError;
   @JsonKey(name: "sockets")
@@ -1074,32 +1159,34 @@ mixin _$InstalledEquipment {
 /// @nodoc
 abstract class $InstalledEquipmentCopyWith<$Res> {
   factory $InstalledEquipmentCopyWith(
-          InstalledEquipment value, $Res Function(InstalledEquipment) then) =
-      _$InstalledEquipmentCopyWithImpl<$Res, InstalledEquipment>;
+    InstalledEquipment value,
+    $Res Function(InstalledEquipment) then,
+  ) = _$InstalledEquipmentCopyWithImpl<$Res, InstalledEquipment>;
   @useResult
-  $Res call(
-      {@JsonKey(name: "equipmentId") String equipmentId,
-      @JsonKey(name: "sockets") List<Socket> sockets,
-      @JsonKey(name: "gear_ID") String gearId,
-      @JsonKey(name: "category") GearCategory category,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "icon") String icon,
-      @JsonKey(name: "tier") GearTier tier,
-      @JsonKey(name: "socket_min") int? socketMin,
-      @JsonKey(name: "socket_max") int? socketMax,
-      @JsonKey(name: "staminaMax") @protected int? staminaMax,
-      @JsonKey(name: "staminaUse") @protected int? staminaUse,
-      @JsonKey(name: "luck_addrate") @protected int? luckAddrate,
-      @JsonKey(name: "listeningEP") @protected int? listeningEp,
-      @JsonKey(name: "listeningSSP") @protected int? listeningSsp,
-      @JsonKey(name: "getEXP") @protected int? getExp,
-      @JsonKey(name: "getEP_24hRate") @protected int? getEp24HRate,
-      @JsonKey(name: "getSSP_24hRate") @protected int? getSsp24HRate,
-      @JsonKey(name: "getSSP_Play") @protected int? getSspPlay,
-      @JsonKey(name: "getEP_24hAmount") @protected int? getEp24HAmount,
-      @JsonKey(name: "getSSP_24hAmount") @protected int? getSsp24HAmount,
-      @JsonKey(name: "getSSP_PlayDelay") @protected int? getSspPlayDelay,
-      @JsonKey(name: "getSSP_PlayAmount") @protected int? getSspPlayAmount});
+  $Res call({
+    @JsonKey(name: "equipmentId") String equipmentId,
+    @JsonKey(name: "sockets") List<Socket> sockets,
+    @JsonKey(name: "gear_ID") String gearId,
+    @JsonKey(name: "category") GearCategory category,
+    @JsonKey(name: "name") String name,
+    @JsonKey(name: "icon") String icon,
+    @JsonKey(name: "tier") GearTier tier,
+    @JsonKey(name: "socket_min") int? socketMin,
+    @JsonKey(name: "socket_max") int? socketMax,
+    @JsonKey(name: "staminaMax") @protected int? staminaMax,
+    @JsonKey(name: "staminaUse") @protected int? staminaUse,
+    @JsonKey(name: "luck_addrate") @protected int? luckAddrate,
+    @JsonKey(name: "listeningEP") @protected int? listeningEp,
+    @JsonKey(name: "listeningSSP") @protected int? listeningSsp,
+    @JsonKey(name: "getEXP") @protected int? getExp,
+    @JsonKey(name: "getEP_24hRate") @protected int? getEp24HRate,
+    @JsonKey(name: "getSSP_24hRate") @protected int? getSsp24HRate,
+    @JsonKey(name: "getSSP_Play") @protected int? getSspPlay,
+    @JsonKey(name: "getEP_24hAmount") @protected int? getEp24HAmount,
+    @JsonKey(name: "getSSP_24hAmount") @protected int? getSsp24HAmount,
+    @JsonKey(name: "getSSP_PlayDelay") @protected int? getSspPlayDelay,
+    @JsonKey(name: "getSSP_PlayAmount") @protected int? getSspPlayAmount,
+  });
 }
 
 /// @nodoc
@@ -1140,139 +1227,167 @@ class _$InstalledEquipmentCopyWithImpl<$Res, $Val extends InstalledEquipment>
     Object? getSspPlayDelay = freezed,
     Object? getSspPlayAmount = freezed,
   }) {
-    return _then(_value.copyWith(
-      equipmentId: null == equipmentId
-          ? _value.equipmentId
-          : equipmentId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sockets: null == sockets
-          ? _value.sockets
-          : sockets // ignore: cast_nullable_to_non_nullable
-              as List<Socket>,
-      gearId: null == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as GearCategory,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      tier: null == tier
-          ? _value.tier
-          : tier // ignore: cast_nullable_to_non_nullable
-              as GearTier,
-      socketMin: freezed == socketMin
-          ? _value.socketMin
-          : socketMin // ignore: cast_nullable_to_non_nullable
-              as int?,
-      socketMax: freezed == socketMax
-          ? _value.socketMax
-          : socketMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaMax: freezed == staminaMax
-          ? _value.staminaMax
-          : staminaMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaUse: freezed == staminaUse
-          ? _value.staminaUse
-          : staminaUse // ignore: cast_nullable_to_non_nullable
-              as int?,
-      luckAddrate: freezed == luckAddrate
-          ? _value.luckAddrate
-          : luckAddrate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningEp: freezed == listeningEp
-          ? _value.listeningEp
-          : listeningEp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningSsp: freezed == listeningSsp
-          ? _value.listeningSsp
-          : listeningSsp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getExp: freezed == getExp
-          ? _value.getExp
-          : getExp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HRate: freezed == getEp24HRate
-          ? _value.getEp24HRate
-          : getEp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HRate: freezed == getSsp24HRate
-          ? _value.getSsp24HRate
-          : getSsp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlay: freezed == getSspPlay
-          ? _value.getSspPlay
-          : getSspPlay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HAmount: freezed == getEp24HAmount
-          ? _value.getEp24HAmount
-          : getEp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HAmount: freezed == getSsp24HAmount
-          ? _value.getSsp24HAmount
-          : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayDelay: freezed == getSspPlayDelay
-          ? _value.getSspPlayDelay
-          : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayAmount: freezed == getSspPlayAmount
-          ? _value.getSspPlayAmount
-          : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            equipmentId:
+                null == equipmentId
+                    ? _value.equipmentId
+                    : equipmentId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            sockets:
+                null == sockets
+                    ? _value.sockets
+                    : sockets // ignore: cast_nullable_to_non_nullable
+                        as List<Socket>,
+            gearId:
+                null == gearId
+                    ? _value.gearId
+                    : gearId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            category:
+                null == category
+                    ? _value.category
+                    : category // ignore: cast_nullable_to_non_nullable
+                        as GearCategory,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            icon:
+                null == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String,
+            tier:
+                null == tier
+                    ? _value.tier
+                    : tier // ignore: cast_nullable_to_non_nullable
+                        as GearTier,
+            socketMin:
+                freezed == socketMin
+                    ? _value.socketMin
+                    : socketMin // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            socketMax:
+                freezed == socketMax
+                    ? _value.socketMax
+                    : socketMax // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            staminaMax:
+                freezed == staminaMax
+                    ? _value.staminaMax
+                    : staminaMax // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            staminaUse:
+                freezed == staminaUse
+                    ? _value.staminaUse
+                    : staminaUse // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            luckAddrate:
+                freezed == luckAddrate
+                    ? _value.luckAddrate
+                    : luckAddrate // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            listeningEp:
+                freezed == listeningEp
+                    ? _value.listeningEp
+                    : listeningEp // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            listeningSsp:
+                freezed == listeningSsp
+                    ? _value.listeningSsp
+                    : listeningSsp // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getExp:
+                freezed == getExp
+                    ? _value.getExp
+                    : getExp // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getEp24HRate:
+                freezed == getEp24HRate
+                    ? _value.getEp24HRate
+                    : getEp24HRate // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSsp24HRate:
+                freezed == getSsp24HRate
+                    ? _value.getSsp24HRate
+                    : getSsp24HRate // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSspPlay:
+                freezed == getSspPlay
+                    ? _value.getSspPlay
+                    : getSspPlay // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getEp24HAmount:
+                freezed == getEp24HAmount
+                    ? _value.getEp24HAmount
+                    : getEp24HAmount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSsp24HAmount:
+                freezed == getSsp24HAmount
+                    ? _value.getSsp24HAmount
+                    : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSspPlayDelay:
+                freezed == getSspPlayDelay
+                    ? _value.getSspPlayDelay
+                    : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSspPlayAmount:
+                freezed == getSspPlayAmount
+                    ? _value.getSspPlayAmount
+                    : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$InstalledEquipmentImplCopyWith<$Res>
     implements $InstalledEquipmentCopyWith<$Res> {
-  factory _$$InstalledEquipmentImplCopyWith(_$InstalledEquipmentImpl value,
-          $Res Function(_$InstalledEquipmentImpl) then) =
-      __$$InstalledEquipmentImplCopyWithImpl<$Res>;
+  factory _$$InstalledEquipmentImplCopyWith(
+    _$InstalledEquipmentImpl value,
+    $Res Function(_$InstalledEquipmentImpl) then,
+  ) = __$$InstalledEquipmentImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: "equipmentId") String equipmentId,
-      @JsonKey(name: "sockets") List<Socket> sockets,
-      @JsonKey(name: "gear_ID") String gearId,
-      @JsonKey(name: "category") GearCategory category,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "icon") String icon,
-      @JsonKey(name: "tier") GearTier tier,
-      @JsonKey(name: "socket_min") int? socketMin,
-      @JsonKey(name: "socket_max") int? socketMax,
-      @JsonKey(name: "staminaMax") @protected int? staminaMax,
-      @JsonKey(name: "staminaUse") @protected int? staminaUse,
-      @JsonKey(name: "luck_addrate") @protected int? luckAddrate,
-      @JsonKey(name: "listeningEP") @protected int? listeningEp,
-      @JsonKey(name: "listeningSSP") @protected int? listeningSsp,
-      @JsonKey(name: "getEXP") @protected int? getExp,
-      @JsonKey(name: "getEP_24hRate") @protected int? getEp24HRate,
-      @JsonKey(name: "getSSP_24hRate") @protected int? getSsp24HRate,
-      @JsonKey(name: "getSSP_Play") @protected int? getSspPlay,
-      @JsonKey(name: "getEP_24hAmount") @protected int? getEp24HAmount,
-      @JsonKey(name: "getSSP_24hAmount") @protected int? getSsp24HAmount,
-      @JsonKey(name: "getSSP_PlayDelay") @protected int? getSspPlayDelay,
-      @JsonKey(name: "getSSP_PlayAmount") @protected int? getSspPlayAmount});
+  $Res call({
+    @JsonKey(name: "equipmentId") String equipmentId,
+    @JsonKey(name: "sockets") List<Socket> sockets,
+    @JsonKey(name: "gear_ID") String gearId,
+    @JsonKey(name: "category") GearCategory category,
+    @JsonKey(name: "name") String name,
+    @JsonKey(name: "icon") String icon,
+    @JsonKey(name: "tier") GearTier tier,
+    @JsonKey(name: "socket_min") int? socketMin,
+    @JsonKey(name: "socket_max") int? socketMax,
+    @JsonKey(name: "staminaMax") @protected int? staminaMax,
+    @JsonKey(name: "staminaUse") @protected int? staminaUse,
+    @JsonKey(name: "luck_addrate") @protected int? luckAddrate,
+    @JsonKey(name: "listeningEP") @protected int? listeningEp,
+    @JsonKey(name: "listeningSSP") @protected int? listeningSsp,
+    @JsonKey(name: "getEXP") @protected int? getExp,
+    @JsonKey(name: "getEP_24hRate") @protected int? getEp24HRate,
+    @JsonKey(name: "getSSP_24hRate") @protected int? getSsp24HRate,
+    @JsonKey(name: "getSSP_Play") @protected int? getSspPlay,
+    @JsonKey(name: "getEP_24hAmount") @protected int? getEp24HAmount,
+    @JsonKey(name: "getSSP_24hAmount") @protected int? getSsp24HAmount,
+    @JsonKey(name: "getSSP_PlayDelay") @protected int? getSspPlayDelay,
+    @JsonKey(name: "getSSP_PlayAmount") @protected int? getSspPlayAmount,
+  });
 }
 
 /// @nodoc
 class __$$InstalledEquipmentImplCopyWithImpl<$Res>
     extends _$InstalledEquipmentCopyWithImpl<$Res, _$InstalledEquipmentImpl>
     implements _$$InstalledEquipmentImplCopyWith<$Res> {
-  __$$InstalledEquipmentImplCopyWithImpl(_$InstalledEquipmentImpl _value,
-      $Res Function(_$InstalledEquipmentImpl) _then)
-      : super(_value, _then);
+  __$$InstalledEquipmentImplCopyWithImpl(
+    _$InstalledEquipmentImpl _value,
+    $Res Function(_$InstalledEquipmentImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of InstalledEquipment
   /// with the given fields replaced by the non-null parameter values.
@@ -1302,138 +1417,158 @@ class __$$InstalledEquipmentImplCopyWithImpl<$Res>
     Object? getSspPlayDelay = freezed,
     Object? getSspPlayAmount = freezed,
   }) {
-    return _then(_$InstalledEquipmentImpl(
-      equipmentId: null == equipmentId
-          ? _value.equipmentId
-          : equipmentId // ignore: cast_nullable_to_non_nullable
-              as String,
-      sockets: null == sockets
-          ? _value._sockets
-          : sockets // ignore: cast_nullable_to_non_nullable
-              as List<Socket>,
-      gearId: null == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as GearCategory,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      tier: null == tier
-          ? _value.tier
-          : tier // ignore: cast_nullable_to_non_nullable
-              as GearTier,
-      socketMin: freezed == socketMin
-          ? _value.socketMin
-          : socketMin // ignore: cast_nullable_to_non_nullable
-              as int?,
-      socketMax: freezed == socketMax
-          ? _value.socketMax
-          : socketMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaMax: freezed == staminaMax
-          ? _value.staminaMax
-          : staminaMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaUse: freezed == staminaUse
-          ? _value.staminaUse
-          : staminaUse // ignore: cast_nullable_to_non_nullable
-              as int?,
-      luckAddrate: freezed == luckAddrate
-          ? _value.luckAddrate
-          : luckAddrate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningEp: freezed == listeningEp
-          ? _value.listeningEp
-          : listeningEp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningSsp: freezed == listeningSsp
-          ? _value.listeningSsp
-          : listeningSsp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getExp: freezed == getExp
-          ? _value.getExp
-          : getExp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HRate: freezed == getEp24HRate
-          ? _value.getEp24HRate
-          : getEp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HRate: freezed == getSsp24HRate
-          ? _value.getSsp24HRate
-          : getSsp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlay: freezed == getSspPlay
-          ? _value.getSspPlay
-          : getSspPlay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HAmount: freezed == getEp24HAmount
-          ? _value.getEp24HAmount
-          : getEp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HAmount: freezed == getSsp24HAmount
-          ? _value.getSsp24HAmount
-          : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayDelay: freezed == getSspPlayDelay
-          ? _value.getSspPlayDelay
-          : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayAmount: freezed == getSspPlayAmount
-          ? _value.getSspPlayAmount
-          : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$InstalledEquipmentImpl(
+        equipmentId:
+            null == equipmentId
+                ? _value.equipmentId
+                : equipmentId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        sockets:
+            null == sockets
+                ? _value._sockets
+                : sockets // ignore: cast_nullable_to_non_nullable
+                    as List<Socket>,
+        gearId:
+            null == gearId
+                ? _value.gearId
+                : gearId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        category:
+            null == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                    as GearCategory,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        icon:
+            null == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String,
+        tier:
+            null == tier
+                ? _value.tier
+                : tier // ignore: cast_nullable_to_non_nullable
+                    as GearTier,
+        socketMin:
+            freezed == socketMin
+                ? _value.socketMin
+                : socketMin // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        socketMax:
+            freezed == socketMax
+                ? _value.socketMax
+                : socketMax // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        staminaMax:
+            freezed == staminaMax
+                ? _value.staminaMax
+                : staminaMax // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        staminaUse:
+            freezed == staminaUse
+                ? _value.staminaUse
+                : staminaUse // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        luckAddrate:
+            freezed == luckAddrate
+                ? _value.luckAddrate
+                : luckAddrate // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        listeningEp:
+            freezed == listeningEp
+                ? _value.listeningEp
+                : listeningEp // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        listeningSsp:
+            freezed == listeningSsp
+                ? _value.listeningSsp
+                : listeningSsp // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getExp:
+            freezed == getExp
+                ? _value.getExp
+                : getExp // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getEp24HRate:
+            freezed == getEp24HRate
+                ? _value.getEp24HRate
+                : getEp24HRate // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSsp24HRate:
+            freezed == getSsp24HRate
+                ? _value.getSsp24HRate
+                : getSsp24HRate // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSspPlay:
+            freezed == getSspPlay
+                ? _value.getSspPlay
+                : getSspPlay // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getEp24HAmount:
+            freezed == getEp24HAmount
+                ? _value.getEp24HAmount
+                : getEp24HAmount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSsp24HAmount:
+            freezed == getSsp24HAmount
+                ? _value.getSsp24HAmount
+                : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSspPlayDelay:
+            freezed == getSspPlayDelay
+                ? _value.getSspPlayDelay
+                : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSspPlayAmount:
+            freezed == getSspPlayAmount
+                ? _value.getSspPlayAmount
+                : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$InstalledEquipmentImpl extends _InstalledEquipment {
-  const _$InstalledEquipmentImpl(
-      {@JsonKey(name: "equipmentId") required this.equipmentId,
-      @JsonKey(name: "sockets") required final List<Socket> sockets,
-      @JsonKey(name: "gear_ID") required this.gearId,
-      @JsonKey(name: "category") required this.category,
-      @JsonKey(name: "name") required this.name,
-      @JsonKey(name: "icon") required this.icon,
-      @JsonKey(name: "tier") required this.tier,
-      @JsonKey(name: "socket_min") required this.socketMin,
-      @JsonKey(name: "socket_max") required this.socketMax,
-      @JsonKey(name: "staminaMax") @protected required this.staminaMax,
-      @JsonKey(name: "staminaUse") @protected required this.staminaUse,
-      @JsonKey(name: "luck_addrate") @protected required this.luckAddrate,
-      @JsonKey(name: "listeningEP") @protected required this.listeningEp,
-      @JsonKey(name: "listeningSSP") @protected required this.listeningSsp,
-      @JsonKey(name: "getEXP") @protected required this.getExp,
-      @JsonKey(name: "getEP_24hRate") @protected required this.getEp24HRate,
-      @JsonKey(name: "getSSP_24hRate") @protected required this.getSsp24HRate,
-      @JsonKey(name: "getSSP_Play") @protected required this.getSspPlay,
-      @JsonKey(name: "getEP_24hAmount") @protected required this.getEp24HAmount,
-      @JsonKey(name: "getSSP_24hAmount")
-      @protected
-      required this.getSsp24HAmount,
-      @JsonKey(name: "getSSP_PlayDelay")
-      @protected
-      required this.getSspPlayDelay,
-      @JsonKey(name: "getSSP_PlayAmount")
-      @protected
-      required this.getSspPlayAmount})
-      : _sockets = sockets,
-        super._();
+  const _$InstalledEquipmentImpl({
+    @JsonKey(name: "equipmentId") required this.equipmentId,
+    @JsonKey(name: "sockets") required final List<Socket> sockets,
+    @JsonKey(name: "gear_ID") required this.gearId,
+    @JsonKey(name: "category") required this.category,
+    @JsonKey(name: "name") required this.name,
+    @JsonKey(name: "icon") required this.icon,
+    @JsonKey(name: "tier") required this.tier,
+    @JsonKey(name: "socket_min") required this.socketMin,
+    @JsonKey(name: "socket_max") required this.socketMax,
+    @JsonKey(name: "staminaMax") @protected required this.staminaMax,
+    @JsonKey(name: "staminaUse") @protected required this.staminaUse,
+    @JsonKey(name: "luck_addrate") @protected required this.luckAddrate,
+    @JsonKey(name: "listeningEP") @protected required this.listeningEp,
+    @JsonKey(name: "listeningSSP") @protected required this.listeningSsp,
+    @JsonKey(name: "getEXP") @protected required this.getExp,
+    @JsonKey(name: "getEP_24hRate") @protected required this.getEp24HRate,
+    @JsonKey(name: "getSSP_24hRate") @protected required this.getSsp24HRate,
+    @JsonKey(name: "getSSP_Play") @protected required this.getSspPlay,
+    @JsonKey(name: "getEP_24hAmount") @protected required this.getEp24HAmount,
+    @JsonKey(name: "getSSP_24hAmount") @protected required this.getSsp24HAmount,
+    @JsonKey(name: "getSSP_PlayDelay") @protected required this.getSspPlayDelay,
+    @JsonKey(name: "getSSP_PlayAmount")
+    @protected
+    required this.getSspPlayAmount,
+  }) : _sockets = sockets,
+       super._();
 
   factory _$InstalledEquipmentImpl.fromJson(Map<String, dynamic> json) =>
       _$$InstalledEquipmentImplFromJson(json);
 
-// Equipment
+  // Equipment
   @override
   @JsonKey(name: "equipmentId")
   final String equipmentId;
@@ -1446,7 +1581,7 @@ class _$InstalledEquipmentImpl extends _InstalledEquipment {
     return EqualUnmodifiableListView(_sockets);
   }
 
-// Gear
+  // Gear
   @override
   @JsonKey(name: "gear_ID")
   final String gearId;
@@ -1574,30 +1709,30 @@ class _$InstalledEquipmentImpl extends _InstalledEquipment {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        equipmentId,
-        const DeepCollectionEquality().hash(_sockets),
-        gearId,
-        category,
-        name,
-        icon,
-        tier,
-        socketMin,
-        socketMax,
-        staminaMax,
-        staminaUse,
-        luckAddrate,
-        listeningEp,
-        listeningSsp,
-        getExp,
-        getEp24HRate,
-        getSsp24HRate,
-        getSspPlay,
-        getEp24HAmount,
-        getSsp24HAmount,
-        getSspPlayDelay,
-        getSspPlayAmount
-      ]);
+    runtimeType,
+    equipmentId,
+    const DeepCollectionEquality().hash(_sockets),
+    gearId,
+    category,
+    name,
+    icon,
+    tier,
+    socketMin,
+    socketMax,
+    staminaMax,
+    staminaUse,
+    luckAddrate,
+    listeningEp,
+    listeningSsp,
+    getExp,
+    getEp24HRate,
+    getSsp24HRate,
+    getSspPlay,
+    getEp24HAmount,
+    getSsp24HAmount,
+    getSspPlayDelay,
+    getSspPlayAmount,
+  ]);
 
   /// Create a copy of InstalledEquipment
   /// with the given fields replaced by the non-null parameter values.
@@ -1606,60 +1741,57 @@ class _$InstalledEquipmentImpl extends _InstalledEquipment {
   @pragma('vm:prefer-inline')
   _$$InstalledEquipmentImplCopyWith<_$InstalledEquipmentImpl> get copyWith =>
       __$$InstalledEquipmentImplCopyWithImpl<_$InstalledEquipmentImpl>(
-          this, _$identity);
+        this,
+        _$identity,
+      );
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$InstalledEquipmentImplToJson(
-      this,
-    );
+    return _$$InstalledEquipmentImplToJson(this);
   }
 }
 
 abstract class _InstalledEquipment extends InstalledEquipment {
-  const factory _InstalledEquipment(
-      {@JsonKey(name: "equipmentId") required final String equipmentId,
-      @JsonKey(name: "sockets") required final List<Socket> sockets,
-      @JsonKey(name: "gear_ID") required final String gearId,
-      @JsonKey(name: "category") required final GearCategory category,
-      @JsonKey(name: "name") required final String name,
-      @JsonKey(name: "icon") required final String icon,
-      @JsonKey(name: "tier") required final GearTier tier,
-      @JsonKey(name: "socket_min") required final int? socketMin,
-      @JsonKey(name: "socket_max") required final int? socketMax,
-      @JsonKey(name: "staminaMax") @protected required final int? staminaMax,
-      @JsonKey(name: "staminaUse") @protected required final int? staminaUse,
-      @JsonKey(name: "luck_addrate") @protected required final int? luckAddrate,
-      @JsonKey(name: "listeningEP") @protected required final int? listeningEp,
-      @JsonKey(name: "listeningSSP")
-      @protected
-      required final int? listeningSsp,
-      @JsonKey(name: "getEXP") @protected required final int? getExp,
-      @JsonKey(name: "getEP_24hRate")
-      @protected
-      required final int? getEp24HRate,
-      @JsonKey(name: "getSSP_24hRate")
-      @protected
-      required final int? getSsp24HRate,
-      @JsonKey(name: "getSSP_Play") @protected required final int? getSspPlay,
-      @JsonKey(name: "getEP_24hAmount")
-      @protected
-      required final int? getEp24HAmount,
-      @JsonKey(name: "getSSP_24hAmount")
-      @protected
-      required final int? getSsp24HAmount,
-      @JsonKey(name: "getSSP_PlayDelay")
-      @protected
-      required final int? getSspPlayDelay,
-      @JsonKey(name: "getSSP_PlayAmount")
-      @protected
-      required final int? getSspPlayAmount}) = _$InstalledEquipmentImpl;
+  const factory _InstalledEquipment({
+    @JsonKey(name: "equipmentId") required final String equipmentId,
+    @JsonKey(name: "sockets") required final List<Socket> sockets,
+    @JsonKey(name: "gear_ID") required final String gearId,
+    @JsonKey(name: "category") required final GearCategory category,
+    @JsonKey(name: "name") required final String name,
+    @JsonKey(name: "icon") required final String icon,
+    @JsonKey(name: "tier") required final GearTier tier,
+    @JsonKey(name: "socket_min") required final int? socketMin,
+    @JsonKey(name: "socket_max") required final int? socketMax,
+    @JsonKey(name: "staminaMax") @protected required final int? staminaMax,
+    @JsonKey(name: "staminaUse") @protected required final int? staminaUse,
+    @JsonKey(name: "luck_addrate") @protected required final int? luckAddrate,
+    @JsonKey(name: "listeningEP") @protected required final int? listeningEp,
+    @JsonKey(name: "listeningSSP") @protected required final int? listeningSsp,
+    @JsonKey(name: "getEXP") @protected required final int? getExp,
+    @JsonKey(name: "getEP_24hRate") @protected required final int? getEp24HRate,
+    @JsonKey(name: "getSSP_24hRate")
+    @protected
+    required final int? getSsp24HRate,
+    @JsonKey(name: "getSSP_Play") @protected required final int? getSspPlay,
+    @JsonKey(name: "getEP_24hAmount")
+    @protected
+    required final int? getEp24HAmount,
+    @JsonKey(name: "getSSP_24hAmount")
+    @protected
+    required final int? getSsp24HAmount,
+    @JsonKey(name: "getSSP_PlayDelay")
+    @protected
+    required final int? getSspPlayDelay,
+    @JsonKey(name: "getSSP_PlayAmount")
+    @protected
+    required final int? getSspPlayAmount,
+  }) = _$InstalledEquipmentImpl;
   const _InstalledEquipment._() : super._();
 
   factory _InstalledEquipment.fromJson(Map<String, dynamic> json) =
       _$InstalledEquipmentImpl.fromJson;
 
-// Equipment
+  // Equipment
   @override
   @JsonKey(name: "equipmentId")
   String get equipmentId;

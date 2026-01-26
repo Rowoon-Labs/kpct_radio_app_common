@@ -12,7 +12,8 @@ part of 'gear.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Gear _$GearFromJson(Map<String, dynamic> json) {
   return _Level.fromJson(json);
@@ -93,40 +94,39 @@ abstract class $GearCopyWith<$Res> {
   factory $GearCopyWith(Gear value, $Res Function(Gear) then) =
       _$GearCopyWithImpl<$Res, Gear>;
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(name: "gear_ID") String gearId,
-      @StringToGearCategoryConverter()
-      @JsonKey(name: "category")
-      GearCategory category,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "icon") String icon,
-      @StringToGearTierConverter() @JsonKey(name: "tier") GearTier tier,
-      @StringToIntConverter() @JsonKey(name: "socket_min") int? socketMin,
-      @StringToIntConverter() @JsonKey(name: "socket_max") int? socketMax,
-      @StringToIntConverter() @JsonKey(name: "staminaMax") int? staminaMax,
-      @StringToIntConverter() @JsonKey(name: "staminaUse") int? staminaUse,
-      @StringToIntConverter() @JsonKey(name: "luck_addrate") int? luckAddrate,
-      @StringToIntConverter() @JsonKey(name: "listeningEP") int? listeningEp,
-      @StringToIntConverter() @JsonKey(name: "listeningSSP") int? listeningSsp,
-      @StringToIntConverter() @JsonKey(name: "getEXP") int? getExp,
-      @StringToIntConverter() @JsonKey(name: "getEP_24hRate") int? getEp24HRate,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hRate")
-      int? getSsp24HRate,
-      @StringToIntConverter() @JsonKey(name: "getSSP_Play") int? getSspPlay,
-      @StringToIntConverter()
-      @JsonKey(name: "getEP_24hAmount")
-      int? getEp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hAmount")
-      int? getSsp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayDelay")
-      int? getSspPlayDelay,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayAmount")
-      int? getSspPlayAmount});
+  $Res call({
+    String id,
+    @JsonKey(name: "gear_ID") String gearId,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    GearCategory category,
+    @JsonKey(name: "name") String name,
+    @JsonKey(name: "icon") String icon,
+    @StringToGearTierConverter() @JsonKey(name: "tier") GearTier tier,
+    @StringToIntConverter() @JsonKey(name: "socket_min") int? socketMin,
+    @StringToIntConverter() @JsonKey(name: "socket_max") int? socketMax,
+    @StringToIntConverter() @JsonKey(name: "staminaMax") int? staminaMax,
+    @StringToIntConverter() @JsonKey(name: "staminaUse") int? staminaUse,
+    @StringToIntConverter() @JsonKey(name: "luck_addrate") int? luckAddrate,
+    @StringToIntConverter() @JsonKey(name: "listeningEP") int? listeningEp,
+    @StringToIntConverter() @JsonKey(name: "listeningSSP") int? listeningSsp,
+    @StringToIntConverter() @JsonKey(name: "getEXP") int? getExp,
+    @StringToIntConverter() @JsonKey(name: "getEP_24hRate") int? getEp24HRate,
+    @StringToIntConverter() @JsonKey(name: "getSSP_24hRate") int? getSsp24HRate,
+    @StringToIntConverter() @JsonKey(name: "getSSP_Play") int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    int? getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    int? getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    int? getSspPlayDelay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayAmount")
+    int? getSspPlayAmount,
+  });
 }
 
 /// @nodoc
@@ -166,136 +166,160 @@ class _$GearCopyWithImpl<$Res, $Val extends Gear>
     Object? getSspPlayDelay = freezed,
     Object? getSspPlayAmount = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      gearId: null == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as GearCategory,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      tier: null == tier
-          ? _value.tier
-          : tier // ignore: cast_nullable_to_non_nullable
-              as GearTier,
-      socketMin: freezed == socketMin
-          ? _value.socketMin
-          : socketMin // ignore: cast_nullable_to_non_nullable
-              as int?,
-      socketMax: freezed == socketMax
-          ? _value.socketMax
-          : socketMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaMax: freezed == staminaMax
-          ? _value.staminaMax
-          : staminaMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaUse: freezed == staminaUse
-          ? _value.staminaUse
-          : staminaUse // ignore: cast_nullable_to_non_nullable
-              as int?,
-      luckAddrate: freezed == luckAddrate
-          ? _value.luckAddrate
-          : luckAddrate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningEp: freezed == listeningEp
-          ? _value.listeningEp
-          : listeningEp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningSsp: freezed == listeningSsp
-          ? _value.listeningSsp
-          : listeningSsp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getExp: freezed == getExp
-          ? _value.getExp
-          : getExp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HRate: freezed == getEp24HRate
-          ? _value.getEp24HRate
-          : getEp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HRate: freezed == getSsp24HRate
-          ? _value.getSsp24HRate
-          : getSsp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlay: freezed == getSspPlay
-          ? _value.getSspPlay
-          : getSspPlay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HAmount: freezed == getEp24HAmount
-          ? _value.getEp24HAmount
-          : getEp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HAmount: freezed == getSsp24HAmount
-          ? _value.getSsp24HAmount
-          : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayDelay: freezed == getSspPlayDelay
-          ? _value.getSspPlayDelay
-          : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayAmount: freezed == getSspPlayAmount
-          ? _value.getSspPlayAmount
-          : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            gearId:
+                null == gearId
+                    ? _value.gearId
+                    : gearId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            category:
+                null == category
+                    ? _value.category
+                    : category // ignore: cast_nullable_to_non_nullable
+                        as GearCategory,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            icon:
+                null == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String,
+            tier:
+                null == tier
+                    ? _value.tier
+                    : tier // ignore: cast_nullable_to_non_nullable
+                        as GearTier,
+            socketMin:
+                freezed == socketMin
+                    ? _value.socketMin
+                    : socketMin // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            socketMax:
+                freezed == socketMax
+                    ? _value.socketMax
+                    : socketMax // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            staminaMax:
+                freezed == staminaMax
+                    ? _value.staminaMax
+                    : staminaMax // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            staminaUse:
+                freezed == staminaUse
+                    ? _value.staminaUse
+                    : staminaUse // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            luckAddrate:
+                freezed == luckAddrate
+                    ? _value.luckAddrate
+                    : luckAddrate // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            listeningEp:
+                freezed == listeningEp
+                    ? _value.listeningEp
+                    : listeningEp // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            listeningSsp:
+                freezed == listeningSsp
+                    ? _value.listeningSsp
+                    : listeningSsp // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getExp:
+                freezed == getExp
+                    ? _value.getExp
+                    : getExp // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getEp24HRate:
+                freezed == getEp24HRate
+                    ? _value.getEp24HRate
+                    : getEp24HRate // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSsp24HRate:
+                freezed == getSsp24HRate
+                    ? _value.getSsp24HRate
+                    : getSsp24HRate // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSspPlay:
+                freezed == getSspPlay
+                    ? _value.getSspPlay
+                    : getSspPlay // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getEp24HAmount:
+                freezed == getEp24HAmount
+                    ? _value.getEp24HAmount
+                    : getEp24HAmount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSsp24HAmount:
+                freezed == getSsp24HAmount
+                    ? _value.getSsp24HAmount
+                    : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSspPlayDelay:
+                freezed == getSspPlayDelay
+                    ? _value.getSspPlayDelay
+                    : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            getSspPlayAmount:
+                freezed == getSspPlayAmount
+                    ? _value.getSspPlayAmount
+                    : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
+                        as int?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$LevelImplCopyWith<$Res> implements $GearCopyWith<$Res> {
   factory _$$LevelImplCopyWith(
-          _$LevelImpl value, $Res Function(_$LevelImpl) then) =
-      __$$LevelImplCopyWithImpl<$Res>;
+    _$LevelImpl value,
+    $Res Function(_$LevelImpl) then,
+  ) = __$$LevelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(name: "gear_ID") String gearId,
-      @StringToGearCategoryConverter()
-      @JsonKey(name: "category")
-      GearCategory category,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "icon") String icon,
-      @StringToGearTierConverter() @JsonKey(name: "tier") GearTier tier,
-      @StringToIntConverter() @JsonKey(name: "socket_min") int? socketMin,
-      @StringToIntConverter() @JsonKey(name: "socket_max") int? socketMax,
-      @StringToIntConverter() @JsonKey(name: "staminaMax") int? staminaMax,
-      @StringToIntConverter() @JsonKey(name: "staminaUse") int? staminaUse,
-      @StringToIntConverter() @JsonKey(name: "luck_addrate") int? luckAddrate,
-      @StringToIntConverter() @JsonKey(name: "listeningEP") int? listeningEp,
-      @StringToIntConverter() @JsonKey(name: "listeningSSP") int? listeningSsp,
-      @StringToIntConverter() @JsonKey(name: "getEXP") int? getExp,
-      @StringToIntConverter() @JsonKey(name: "getEP_24hRate") int? getEp24HRate,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hRate")
-      int? getSsp24HRate,
-      @StringToIntConverter() @JsonKey(name: "getSSP_Play") int? getSspPlay,
-      @StringToIntConverter()
-      @JsonKey(name: "getEP_24hAmount")
-      int? getEp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hAmount")
-      int? getSsp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayDelay")
-      int? getSspPlayDelay,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayAmount")
-      int? getSspPlayAmount});
+  $Res call({
+    String id,
+    @JsonKey(name: "gear_ID") String gearId,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    GearCategory category,
+    @JsonKey(name: "name") String name,
+    @JsonKey(name: "icon") String icon,
+    @StringToGearTierConverter() @JsonKey(name: "tier") GearTier tier,
+    @StringToIntConverter() @JsonKey(name: "socket_min") int? socketMin,
+    @StringToIntConverter() @JsonKey(name: "socket_max") int? socketMax,
+    @StringToIntConverter() @JsonKey(name: "staminaMax") int? staminaMax,
+    @StringToIntConverter() @JsonKey(name: "staminaUse") int? staminaUse,
+    @StringToIntConverter() @JsonKey(name: "luck_addrate") int? luckAddrate,
+    @StringToIntConverter() @JsonKey(name: "listeningEP") int? listeningEp,
+    @StringToIntConverter() @JsonKey(name: "listeningSSP") int? listeningSsp,
+    @StringToIntConverter() @JsonKey(name: "getEXP") int? getExp,
+    @StringToIntConverter() @JsonKey(name: "getEP_24hRate") int? getEp24HRate,
+    @StringToIntConverter() @JsonKey(name: "getSSP_24hRate") int? getSsp24HRate,
+    @StringToIntConverter() @JsonKey(name: "getSSP_Play") int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    int? getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    int? getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    int? getSspPlayDelay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayAmount")
+    int? getSspPlayAmount,
+  });
 }
 
 /// @nodoc
@@ -303,8 +327,9 @@ class __$$LevelImplCopyWithImpl<$Res>
     extends _$GearCopyWithImpl<$Res, _$LevelImpl>
     implements _$$LevelImplCopyWith<$Res> {
   __$$LevelImplCopyWithImpl(
-      _$LevelImpl _value, $Res Function(_$LevelImpl) _then)
-      : super(_value, _then);
+    _$LevelImpl _value,
+    $Res Function(_$LevelImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Gear
   /// with the given fields replaced by the non-null parameter values.
@@ -333,151 +358,174 @@ class __$$LevelImplCopyWithImpl<$Res>
     Object? getSspPlayDelay = freezed,
     Object? getSspPlayAmount = freezed,
   }) {
-    return _then(_$LevelImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      gearId: null == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as GearCategory,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      tier: null == tier
-          ? _value.tier
-          : tier // ignore: cast_nullable_to_non_nullable
-              as GearTier,
-      socketMin: freezed == socketMin
-          ? _value.socketMin
-          : socketMin // ignore: cast_nullable_to_non_nullable
-              as int?,
-      socketMax: freezed == socketMax
-          ? _value.socketMax
-          : socketMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaMax: freezed == staminaMax
-          ? _value.staminaMax
-          : staminaMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      staminaUse: freezed == staminaUse
-          ? _value.staminaUse
-          : staminaUse // ignore: cast_nullable_to_non_nullable
-              as int?,
-      luckAddrate: freezed == luckAddrate
-          ? _value.luckAddrate
-          : luckAddrate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningEp: freezed == listeningEp
-          ? _value.listeningEp
-          : listeningEp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      listeningSsp: freezed == listeningSsp
-          ? _value.listeningSsp
-          : listeningSsp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getExp: freezed == getExp
-          ? _value.getExp
-          : getExp // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HRate: freezed == getEp24HRate
-          ? _value.getEp24HRate
-          : getEp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HRate: freezed == getSsp24HRate
-          ? _value.getSsp24HRate
-          : getSsp24HRate // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlay: freezed == getSspPlay
-          ? _value.getSspPlay
-          : getSspPlay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getEp24HAmount: freezed == getEp24HAmount
-          ? _value.getEp24HAmount
-          : getEp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSsp24HAmount: freezed == getSsp24HAmount
-          ? _value.getSsp24HAmount
-          : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayDelay: freezed == getSspPlayDelay
-          ? _value.getSspPlayDelay
-          : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
-              as int?,
-      getSspPlayAmount: freezed == getSspPlayAmount
-          ? _value.getSspPlayAmount
-          : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ));
+    return _then(
+      _$LevelImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        gearId:
+            null == gearId
+                ? _value.gearId
+                : gearId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        category:
+            null == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                    as GearCategory,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        icon:
+            null == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String,
+        tier:
+            null == tier
+                ? _value.tier
+                : tier // ignore: cast_nullable_to_non_nullable
+                    as GearTier,
+        socketMin:
+            freezed == socketMin
+                ? _value.socketMin
+                : socketMin // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        socketMax:
+            freezed == socketMax
+                ? _value.socketMax
+                : socketMax // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        staminaMax:
+            freezed == staminaMax
+                ? _value.staminaMax
+                : staminaMax // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        staminaUse:
+            freezed == staminaUse
+                ? _value.staminaUse
+                : staminaUse // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        luckAddrate:
+            freezed == luckAddrate
+                ? _value.luckAddrate
+                : luckAddrate // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        listeningEp:
+            freezed == listeningEp
+                ? _value.listeningEp
+                : listeningEp // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        listeningSsp:
+            freezed == listeningSsp
+                ? _value.listeningSsp
+                : listeningSsp // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getExp:
+            freezed == getExp
+                ? _value.getExp
+                : getExp // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getEp24HRate:
+            freezed == getEp24HRate
+                ? _value.getEp24HRate
+                : getEp24HRate // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSsp24HRate:
+            freezed == getSsp24HRate
+                ? _value.getSsp24HRate
+                : getSsp24HRate // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSspPlay:
+            freezed == getSspPlay
+                ? _value.getSspPlay
+                : getSspPlay // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getEp24HAmount:
+            freezed == getEp24HAmount
+                ? _value.getEp24HAmount
+                : getEp24HAmount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSsp24HAmount:
+            freezed == getSsp24HAmount
+                ? _value.getSsp24HAmount
+                : getSsp24HAmount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSspPlayDelay:
+            freezed == getSspPlayDelay
+                ? _value.getSspPlayDelay
+                : getSspPlayDelay // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        getSspPlayAmount:
+            freezed == getSspPlayAmount
+                ? _value.getSspPlayAmount
+                : getSspPlayAmount // ignore: cast_nullable_to_non_nullable
+                    as int?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$LevelImpl extends _Level {
-  const _$LevelImpl(
-      {required this.id,
-      @JsonKey(name: "gear_ID") required this.gearId,
-      @StringToGearCategoryConverter()
-      @JsonKey(name: "category")
-      required this.category,
-      @JsonKey(name: "name") required this.name,
-      @JsonKey(name: "icon") required this.icon,
-      @StringToGearTierConverter() @JsonKey(name: "tier") required this.tier,
-      @StringToIntConverter()
-      @JsonKey(name: "socket_min")
-      required this.socketMin,
-      @StringToIntConverter()
-      @JsonKey(name: "socket_max")
-      required this.socketMax,
-      @StringToIntConverter()
-      @JsonKey(name: "staminaMax")
-      required this.staminaMax,
-      @StringToIntConverter()
-      @JsonKey(name: "staminaUse")
-      required this.staminaUse,
-      @StringToIntConverter()
-      @JsonKey(name: "luck_addrate")
-      required this.luckAddrate,
-      @StringToIntConverter()
-      @JsonKey(name: "listeningEP")
-      required this.listeningEp,
-      @StringToIntConverter()
-      @JsonKey(name: "listeningSSP")
-      required this.listeningSsp,
-      @StringToIntConverter() @JsonKey(name: "getEXP") required this.getExp,
-      @StringToIntConverter()
-      @JsonKey(name: "getEP_24hRate")
-      required this.getEp24HRate,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hRate")
-      required this.getSsp24HRate,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_Play")
-      required this.getSspPlay,
-      @StringToIntConverter()
-      @JsonKey(name: "getEP_24hAmount")
-      required this.getEp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hAmount")
-      required this.getSsp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayDelay")
-      required this.getSspPlayDelay,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayAmount")
-      required this.getSspPlayAmount})
-      : super._();
+  const _$LevelImpl({
+    required this.id,
+    @JsonKey(name: "gear_ID") required this.gearId,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    required this.category,
+    @JsonKey(name: "name") required this.name,
+    @JsonKey(name: "icon") required this.icon,
+    @StringToGearTierConverter() @JsonKey(name: "tier") required this.tier,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_min")
+    required this.socketMin,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_max")
+    required this.socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    required this.staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    required this.staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    required this.luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    required this.listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    required this.listeningSsp,
+    @StringToIntConverter() @JsonKey(name: "getEXP") required this.getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    required this.getEp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hRate")
+    required this.getSsp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    required this.getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    required this.getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    required this.getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    required this.getSspPlayDelay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayAmount")
+    required this.getSspPlayAmount,
+  }) : super._();
 
   factory _$LevelImpl.fromJson(Map<String, dynamic> json) =>
       _$$LevelImplFromJson(json);
@@ -613,29 +661,29 @@ class _$LevelImpl extends _Level {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
-        runtimeType,
-        id,
-        gearId,
-        category,
-        name,
-        icon,
-        tier,
-        socketMin,
-        socketMax,
-        staminaMax,
-        staminaUse,
-        luckAddrate,
-        listeningEp,
-        listeningSsp,
-        getExp,
-        getEp24HRate,
-        getSsp24HRate,
-        getSspPlay,
-        getEp24HAmount,
-        getSsp24HAmount,
-        getSspPlayDelay,
-        getSspPlayAmount
-      ]);
+    runtimeType,
+    id,
+    gearId,
+    category,
+    name,
+    icon,
+    tier,
+    socketMin,
+    socketMax,
+    staminaMax,
+    staminaUse,
+    luckAddrate,
+    listeningEp,
+    listeningSsp,
+    getExp,
+    getEp24HRate,
+    getSsp24HRate,
+    getSspPlay,
+    getEp24HAmount,
+    getSsp24HAmount,
+    getSspPlayDelay,
+    getSspPlayAmount,
+  ]);
 
   /// Create a copy of Gear
   /// with the given fields replaced by the non-null parameter values.
@@ -647,69 +695,66 @@ class _$LevelImpl extends _Level {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$LevelImplToJson(
-      this,
-    );
+    return _$$LevelImplToJson(this);
   }
 }
 
 abstract class _Level extends Gear {
-  const factory _Level(
-      {required final String id,
-      @JsonKey(name: "gear_ID") required final String gearId,
-      @StringToGearCategoryConverter()
-      @JsonKey(name: "category")
-      required final GearCategory category,
-      @JsonKey(name: "name") required final String name,
-      @JsonKey(name: "icon") required final String icon,
-      @StringToGearTierConverter()
-      @JsonKey(name: "tier")
-      required final GearTier tier,
-      @StringToIntConverter()
-      @JsonKey(name: "socket_min")
-      required final int? socketMin,
-      @StringToIntConverter()
-      @JsonKey(name: "socket_max")
-      required final int? socketMax,
-      @StringToIntConverter()
-      @JsonKey(name: "staminaMax")
-      required final int? staminaMax,
-      @StringToIntConverter()
-      @JsonKey(name: "staminaUse")
-      required final int? staminaUse,
-      @StringToIntConverter()
-      @JsonKey(name: "luck_addrate")
-      required final int? luckAddrate,
-      @StringToIntConverter()
-      @JsonKey(name: "listeningEP")
-      required final int? listeningEp,
-      @StringToIntConverter()
-      @JsonKey(name: "listeningSSP")
-      required final int? listeningSsp,
-      @StringToIntConverter()
-      @JsonKey(name: "getEXP")
-      required final int? getExp,
-      @StringToIntConverter()
-      @JsonKey(name: "getEP_24hRate")
-      required final int? getEp24HRate,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hRate")
-      required final int? getSsp24HRate,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_Play")
-      required final int? getSspPlay,
-      @StringToIntConverter()
-      @JsonKey(name: "getEP_24hAmount")
-      required final int? getEp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_24hAmount")
-      required final int? getSsp24HAmount,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayDelay")
-      required final int? getSspPlayDelay,
-      @StringToIntConverter()
-      @JsonKey(name: "getSSP_PlayAmount")
-      required final int? getSspPlayAmount}) = _$LevelImpl;
+  const factory _Level({
+    required final String id,
+    @JsonKey(name: "gear_ID") required final String gearId,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    required final GearCategory category,
+    @JsonKey(name: "name") required final String name,
+    @JsonKey(name: "icon") required final String icon,
+    @StringToGearTierConverter()
+    @JsonKey(name: "tier")
+    required final GearTier tier,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_min")
+    required final int? socketMin,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_max")
+    required final int? socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    required final int? staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    required final int? staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    required final int? luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    required final int? listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    required final int? listeningSsp,
+    @StringToIntConverter() @JsonKey(name: "getEXP") required final int? getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    required final int? getEp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hRate")
+    required final int? getSsp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    required final int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    required final int? getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    required final int? getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    required final int? getSspPlayDelay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayAmount")
+    required final int? getSspPlayAmount,
+  }) = _$LevelImpl;
   const _Level._() : super._();
 
   factory _Level.fromJson(Map<String, dynamic> json) = _$LevelImpl.fromJson;
@@ -828,12 +873,13 @@ abstract class $SocketCopyWith<$Res> {
   factory $SocketCopyWith(Socket value, $Res Function(Socket) then) =
       _$SocketCopyWithImpl<$Res, Socket>;
   @useResult
-  $Res call(
-      {String? gearId,
-      int getExp,
-      int staminaUse,
-      int listeningEp,
-      int listeningSsp});
+  $Res call({
+    String? gearId,
+    int getExp,
+    int staminaUse,
+    int listeningEp,
+    int listeningSsp,
+  });
 }
 
 /// @nodoc
@@ -857,44 +903,54 @@ class _$SocketCopyWithImpl<$Res, $Val extends Socket>
     Object? listeningEp = null,
     Object? listeningSsp = null,
   }) {
-    return _then(_value.copyWith(
-      gearId: freezed == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      getExp: null == getExp
-          ? _value.getExp
-          : getExp // ignore: cast_nullable_to_non_nullable
-              as int,
-      staminaUse: null == staminaUse
-          ? _value.staminaUse
-          : staminaUse // ignore: cast_nullable_to_non_nullable
-              as int,
-      listeningEp: null == listeningEp
-          ? _value.listeningEp
-          : listeningEp // ignore: cast_nullable_to_non_nullable
-              as int,
-      listeningSsp: null == listeningSsp
-          ? _value.listeningSsp
-          : listeningSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            gearId:
+                freezed == gearId
+                    ? _value.gearId
+                    : gearId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            getExp:
+                null == getExp
+                    ? _value.getExp
+                    : getExp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            staminaUse:
+                null == staminaUse
+                    ? _value.staminaUse
+                    : staminaUse // ignore: cast_nullable_to_non_nullable
+                        as int,
+            listeningEp:
+                null == listeningEp
+                    ? _value.listeningEp
+                    : listeningEp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            listeningSsp:
+                null == listeningSsp
+                    ? _value.listeningSsp
+                    : listeningSsp // ignore: cast_nullable_to_non_nullable
+                        as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$SocketImplCopyWith<$Res> implements $SocketCopyWith<$Res> {
   factory _$$SocketImplCopyWith(
-          _$SocketImpl value, $Res Function(_$SocketImpl) then) =
-      __$$SocketImplCopyWithImpl<$Res>;
+    _$SocketImpl value,
+    $Res Function(_$SocketImpl) then,
+  ) = __$$SocketImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? gearId,
-      int getExp,
-      int staminaUse,
-      int listeningEp,
-      int listeningSsp});
+  $Res call({
+    String? gearId,
+    int getExp,
+    int staminaUse,
+    int listeningEp,
+    int listeningSsp,
+  });
 }
 
 /// @nodoc
@@ -902,8 +958,9 @@ class __$$SocketImplCopyWithImpl<$Res>
     extends _$SocketCopyWithImpl<$Res, _$SocketImpl>
     implements _$$SocketImplCopyWith<$Res> {
   __$$SocketImplCopyWithImpl(
-      _$SocketImpl _value, $Res Function(_$SocketImpl) _then)
-      : super(_value, _then);
+    _$SocketImpl _value,
+    $Res Function(_$SocketImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Socket
   /// with the given fields replaced by the non-null parameter values.
@@ -916,28 +973,35 @@ class __$$SocketImplCopyWithImpl<$Res>
     Object? listeningEp = null,
     Object? listeningSsp = null,
   }) {
-    return _then(_$SocketImpl(
-      gearId: freezed == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      getExp: null == getExp
-          ? _value.getExp
-          : getExp // ignore: cast_nullable_to_non_nullable
-              as int,
-      staminaUse: null == staminaUse
-          ? _value.staminaUse
-          : staminaUse // ignore: cast_nullable_to_non_nullable
-              as int,
-      listeningEp: null == listeningEp
-          ? _value.listeningEp
-          : listeningEp // ignore: cast_nullable_to_non_nullable
-              as int,
-      listeningSsp: null == listeningSsp
-          ? _value.listeningSsp
-          : listeningSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$SocketImpl(
+        gearId:
+            freezed == gearId
+                ? _value.gearId
+                : gearId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        getExp:
+            null == getExp
+                ? _value.getExp
+                : getExp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        staminaUse:
+            null == staminaUse
+                ? _value.staminaUse
+                : staminaUse // ignore: cast_nullable_to_non_nullable
+                    as int,
+        listeningEp:
+            null == listeningEp
+                ? _value.listeningEp
+                : listeningEp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        listeningSsp:
+            null == listeningSsp
+                ? _value.listeningSsp
+                : listeningSsp // ignore: cast_nullable_to_non_nullable
+                    as int,
+      ),
+    );
   }
 }
 
@@ -945,13 +1009,13 @@ class __$$SocketImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$SocketImpl extends _Socket {
-  const _$SocketImpl(
-      {required this.gearId,
-      required this.getExp,
-      required this.staminaUse,
-      required this.listeningEp,
-      required this.listeningSsp})
-      : super._();
+  const _$SocketImpl({
+    required this.gearId,
+    required this.getExp,
+    required this.staminaUse,
+    required this.listeningEp,
+    required this.listeningSsp,
+  }) : super._();
 
   factory _$SocketImpl.fromJson(Map<String, dynamic> json) =>
       _$$SocketImplFromJson(json);
@@ -990,7 +1054,13 @@ class _$SocketImpl extends _Socket {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, gearId, getExp, staminaUse, listeningEp, listeningSsp);
+    runtimeType,
+    gearId,
+    getExp,
+    staminaUse,
+    listeningEp,
+    listeningSsp,
+  );
 
   /// Create a copy of Socket
   /// with the given fields replaced by the non-null parameter values.
@@ -1002,19 +1072,18 @@ class _$SocketImpl extends _Socket {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SocketImplToJson(
-      this,
-    );
+    return _$$SocketImplToJson(this);
   }
 }
 
 abstract class _Socket extends Socket {
-  const factory _Socket(
-      {required final String? gearId,
-      required final int getExp,
-      required final int staminaUse,
-      required final int listeningEp,
-      required final int listeningSsp}) = _$SocketImpl;
+  const factory _Socket({
+    required final String? gearId,
+    required final int getExp,
+    required final int staminaUse,
+    required final int listeningEp,
+    required final int listeningSsp,
+  }) = _$SocketImpl;
   const _Socket._() : super._();
 
   factory _Socket.fromJson(Map<String, dynamic> json) = _$SocketImpl.fromJson;
@@ -1065,12 +1134,13 @@ abstract class $EquipmentCopyWith<$Res> {
   factory $EquipmentCopyWith(Equipment value, $Res Function(Equipment) then) =
       _$EquipmentCopyWithImpl<$Res, Equipment>;
   @useResult
-  $Res call(
-      {String id,
-      String gearId,
-      GearCategory category,
-      bool mounted,
-      List<Socket> sockets});
+  $Res call({
+    String id,
+    String gearId,
+    GearCategory category,
+    bool mounted,
+    List<Socket> sockets,
+  });
 }
 
 /// @nodoc
@@ -1094,28 +1164,36 @@ class _$EquipmentCopyWithImpl<$Res, $Val extends Equipment>
     Object? mounted = null,
     Object? sockets = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      gearId: null == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as GearCategory,
-      mounted: null == mounted
-          ? _value.mounted
-          : mounted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      sockets: null == sockets
-          ? _value.sockets
-          : sockets // ignore: cast_nullable_to_non_nullable
-              as List<Socket>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            gearId:
+                null == gearId
+                    ? _value.gearId
+                    : gearId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            category:
+                null == category
+                    ? _value.category
+                    : category // ignore: cast_nullable_to_non_nullable
+                        as GearCategory,
+            mounted:
+                null == mounted
+                    ? _value.mounted
+                    : mounted // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            sockets:
+                null == sockets
+                    ? _value.sockets
+                    : sockets // ignore: cast_nullable_to_non_nullable
+                        as List<Socket>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -1123,16 +1201,18 @@ class _$EquipmentCopyWithImpl<$Res, $Val extends Equipment>
 abstract class _$$EquipmentImplCopyWith<$Res>
     implements $EquipmentCopyWith<$Res> {
   factory _$$EquipmentImplCopyWith(
-          _$EquipmentImpl value, $Res Function(_$EquipmentImpl) then) =
-      __$$EquipmentImplCopyWithImpl<$Res>;
+    _$EquipmentImpl value,
+    $Res Function(_$EquipmentImpl) then,
+  ) = __$$EquipmentImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      String gearId,
-      GearCategory category,
-      bool mounted,
-      List<Socket> sockets});
+  $Res call({
+    String id,
+    String gearId,
+    GearCategory category,
+    bool mounted,
+    List<Socket> sockets,
+  });
 }
 
 /// @nodoc
@@ -1140,8 +1220,9 @@ class __$$EquipmentImplCopyWithImpl<$Res>
     extends _$EquipmentCopyWithImpl<$Res, _$EquipmentImpl>
     implements _$$EquipmentImplCopyWith<$Res> {
   __$$EquipmentImplCopyWithImpl(
-      _$EquipmentImpl _value, $Res Function(_$EquipmentImpl) _then)
-      : super(_value, _then);
+    _$EquipmentImpl _value,
+    $Res Function(_$EquipmentImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Equipment
   /// with the given fields replaced by the non-null parameter values.
@@ -1154,28 +1235,35 @@ class __$$EquipmentImplCopyWithImpl<$Res>
     Object? mounted = null,
     Object? sockets = null,
   }) {
-    return _then(_$EquipmentImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      gearId: null == gearId
-          ? _value.gearId
-          : gearId // ignore: cast_nullable_to_non_nullable
-              as String,
-      category: null == category
-          ? _value.category
-          : category // ignore: cast_nullable_to_non_nullable
-              as GearCategory,
-      mounted: null == mounted
-          ? _value.mounted
-          : mounted // ignore: cast_nullable_to_non_nullable
-              as bool,
-      sockets: null == sockets
-          ? _value._sockets
-          : sockets // ignore: cast_nullable_to_non_nullable
-              as List<Socket>,
-    ));
+    return _then(
+      _$EquipmentImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        gearId:
+            null == gearId
+                ? _value.gearId
+                : gearId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        category:
+            null == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                    as GearCategory,
+        mounted:
+            null == mounted
+                ? _value.mounted
+                : mounted // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        sockets:
+            null == sockets
+                ? _value._sockets
+                : sockets // ignore: cast_nullable_to_non_nullable
+                    as List<Socket>,
+      ),
+    );
   }
 }
 
@@ -1183,14 +1271,14 @@ class __$$EquipmentImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$EquipmentImpl extends _Equipment {
-  const _$EquipmentImpl(
-      {required this.id,
-      required this.gearId,
-      required this.category,
-      required this.mounted,
-      required final List<Socket> sockets})
-      : _sockets = sockets,
-        super._();
+  const _$EquipmentImpl({
+    required this.id,
+    required this.gearId,
+    required this.category,
+    required this.mounted,
+    required final List<Socket> sockets,
+  }) : _sockets = sockets,
+       super._();
 
   factory _$EquipmentImpl.fromJson(Map<String, dynamic> json) =>
       _$$EquipmentImplFromJson(json);
@@ -1231,8 +1319,14 @@ class _$EquipmentImpl extends _Equipment {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, gearId, category, mounted,
-      const DeepCollectionEquality().hash(_sockets));
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    gearId,
+    category,
+    mounted,
+    const DeepCollectionEquality().hash(_sockets),
+  );
 
   /// Create a copy of Equipment
   /// with the given fields replaced by the non-null parameter values.
@@ -1244,19 +1338,18 @@ class _$EquipmentImpl extends _Equipment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EquipmentImplToJson(
-      this,
-    );
+    return _$$EquipmentImplToJson(this);
   }
 }
 
 abstract class _Equipment extends Equipment {
-  const factory _Equipment(
-      {required final String id,
-      required final String gearId,
-      required final GearCategory category,
-      required final bool mounted,
-      required final List<Socket> sockets}) = _$EquipmentImpl;
+  const factory _Equipment({
+    required final String id,
+    required final String gearId,
+    required final GearCategory category,
+    required final bool mounted,
+    required final List<Socket> sockets,
+  }) = _$EquipmentImpl;
   const _Equipment._() : super._();
 
   factory _Equipment.fromJson(Map<String, dynamic> json) =
@@ -1324,24 +1417,31 @@ class _$PackCopyWithImpl<$Res, $Val extends Pack>
     Object? gear = null,
     Object? equipments = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      stackable: null == stackable
-          ? _value.stackable
-          : stackable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      gear: null == gear
-          ? _value.gear
-          : gear // ignore: cast_nullable_to_non_nullable
-              as Gear,
-      equipments: null == equipments
-          ? _value.equipments
-          : equipments // ignore: cast_nullable_to_non_nullable
-              as List<Equipment>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            stackable:
+                null == stackable
+                    ? _value.stackable
+                    : stackable // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            gear:
+                null == gear
+                    ? _value.gear
+                    : gear // ignore: cast_nullable_to_non_nullable
+                        as Gear,
+            equipments:
+                null == equipments
+                    ? _value.equipments
+                    : equipments // ignore: cast_nullable_to_non_nullable
+                        as List<Equipment>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Pack
@@ -1358,8 +1458,9 @@ class _$PackCopyWithImpl<$Res, $Val extends Pack>
 /// @nodoc
 abstract class _$$PackImplCopyWith<$Res> implements $PackCopyWith<$Res> {
   factory _$$PackImplCopyWith(
-          _$PackImpl value, $Res Function(_$PackImpl) then) =
-      __$$PackImplCopyWithImpl<$Res>;
+    _$PackImpl value,
+    $Res Function(_$PackImpl) then,
+  ) = __$$PackImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, bool stackable, Gear gear, List<Equipment> equipments});
@@ -1373,7 +1474,7 @@ class __$$PackImplCopyWithImpl<$Res>
     extends _$PackCopyWithImpl<$Res, _$PackImpl>
     implements _$$PackImplCopyWith<$Res> {
   __$$PackImplCopyWithImpl(_$PackImpl _value, $Res Function(_$PackImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of Pack
   /// with the given fields replaced by the non-null parameter values.
@@ -1385,37 +1486,43 @@ class __$$PackImplCopyWithImpl<$Res>
     Object? gear = null,
     Object? equipments = null,
   }) {
-    return _then(_$PackImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      stackable: null == stackable
-          ? _value.stackable
-          : stackable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      gear: null == gear
-          ? _value.gear
-          : gear // ignore: cast_nullable_to_non_nullable
-              as Gear,
-      equipments: null == equipments
-          ? _value._equipments
-          : equipments // ignore: cast_nullable_to_non_nullable
-              as List<Equipment>,
-    ));
+    return _then(
+      _$PackImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        stackable:
+            null == stackable
+                ? _value.stackable
+                : stackable // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        gear:
+            null == gear
+                ? _value.gear
+                : gear // ignore: cast_nullable_to_non_nullable
+                    as Gear,
+        equipments:
+            null == equipments
+                ? _value._equipments
+                : equipments // ignore: cast_nullable_to_non_nullable
+                    as List<Equipment>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$PackImpl extends _Pack {
-  const _$PackImpl(
-      {required this.id,
-      required this.stackable,
-      required this.gear,
-      required final List<Equipment> equipments})
-      : _equipments = equipments,
-        super._();
+  const _$PackImpl({
+    required this.id,
+    required this.stackable,
+    required this.gear,
+    required final List<Equipment> equipments,
+  }) : _equipments = equipments,
+       super._();
 
   @override
   final String id;
@@ -1445,13 +1552,20 @@ class _$PackImpl extends _Pack {
             (identical(other.stackable, stackable) ||
                 other.stackable == stackable) &&
             (identical(other.gear, gear) || other.gear == gear) &&
-            const DeepCollectionEquality()
-                .equals(other._equipments, _equipments));
+            const DeepCollectionEquality().equals(
+              other._equipments,
+              _equipments,
+            ));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, stackable, gear,
-      const DeepCollectionEquality().hash(_equipments));
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    stackable,
+    gear,
+    const DeepCollectionEquality().hash(_equipments),
+  );
 
   /// Create a copy of Pack
   /// with the given fields replaced by the non-null parameter values.
@@ -1463,11 +1577,12 @@ class _$PackImpl extends _Pack {
 }
 
 abstract class _Pack extends Pack {
-  const factory _Pack(
-      {required final String id,
-      required final bool stackable,
-      required final Gear gear,
-      required final List<Equipment> equipments}) = _$PackImpl;
+  const factory _Pack({
+    required final String id,
+    required final bool stackable,
+    required final Gear gear,
+    required final List<Equipment> equipments,
+  }) = _$PackImpl;
   const _Pack._() : super._();
 
   @override
@@ -1505,8 +1620,12 @@ abstract class $KitCopyWith<$Res> {
   factory $KitCopyWith(Kit value, $Res Function(Kit) then) =
       _$KitCopyWithImpl<$Res, Kit>;
   @useResult
-  $Res call(
-      {String id, bool stackable, Gear gear, List<Equipment>? equipments});
+  $Res call({
+    String id,
+    bool stackable,
+    Gear gear,
+    List<Equipment>? equipments,
+  });
 
   $GearCopyWith<$Res> get gear;
 }
@@ -1530,24 +1649,31 @@ class _$KitCopyWithImpl<$Res, $Val extends Kit> implements $KitCopyWith<$Res> {
     Object? gear = null,
     Object? equipments = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      stackable: null == stackable
-          ? _value.stackable
-          : stackable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      gear: null == gear
-          ? _value.gear
-          : gear // ignore: cast_nullable_to_non_nullable
-              as Gear,
-      equipments: freezed == equipments
-          ? _value.equipments
-          : equipments // ignore: cast_nullable_to_non_nullable
-              as List<Equipment>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            stackable:
+                null == stackable
+                    ? _value.stackable
+                    : stackable // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            gear:
+                null == gear
+                    ? _value.gear
+                    : gear // ignore: cast_nullable_to_non_nullable
+                        as Gear,
+            equipments:
+                freezed == equipments
+                    ? _value.equipments
+                    : equipments // ignore: cast_nullable_to_non_nullable
+                        as List<Equipment>?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Kit
@@ -1567,8 +1693,12 @@ abstract class _$$KitImplCopyWith<$Res> implements $KitCopyWith<$Res> {
       __$$KitImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id, bool stackable, Gear gear, List<Equipment>? equipments});
+  $Res call({
+    String id,
+    bool stackable,
+    Gear gear,
+    List<Equipment>? equipments,
+  });
 
   @override
   $GearCopyWith<$Res> get gear;
@@ -1578,7 +1708,7 @@ abstract class _$$KitImplCopyWith<$Res> implements $KitCopyWith<$Res> {
 class __$$KitImplCopyWithImpl<$Res> extends _$KitCopyWithImpl<$Res, _$KitImpl>
     implements _$$KitImplCopyWith<$Res> {
   __$$KitImplCopyWithImpl(_$KitImpl _value, $Res Function(_$KitImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   /// Create a copy of Kit
   /// with the given fields replaced by the non-null parameter values.
@@ -1590,37 +1720,43 @@ class __$$KitImplCopyWithImpl<$Res> extends _$KitCopyWithImpl<$Res, _$KitImpl>
     Object? gear = null,
     Object? equipments = freezed,
   }) {
-    return _then(_$KitImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      stackable: null == stackable
-          ? _value.stackable
-          : stackable // ignore: cast_nullable_to_non_nullable
-              as bool,
-      gear: null == gear
-          ? _value.gear
-          : gear // ignore: cast_nullable_to_non_nullable
-              as Gear,
-      equipments: freezed == equipments
-          ? _value._equipments
-          : equipments // ignore: cast_nullable_to_non_nullable
-              as List<Equipment>?,
-    ));
+    return _then(
+      _$KitImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        stackable:
+            null == stackable
+                ? _value.stackable
+                : stackable // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        gear:
+            null == gear
+                ? _value.gear
+                : gear // ignore: cast_nullable_to_non_nullable
+                    as Gear,
+        equipments:
+            freezed == equipments
+                ? _value._equipments
+                : equipments // ignore: cast_nullable_to_non_nullable
+                    as List<Equipment>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$KitImpl extends _Kit {
-  const _$KitImpl(
-      {required this.id,
-      required this.stackable,
-      required this.gear,
-      required final List<Equipment>? equipments})
-      : _equipments = equipments,
-        super._();
+  const _$KitImpl({
+    required this.id,
+    required this.stackable,
+    required this.gear,
+    required final List<Equipment>? equipments,
+  }) : _equipments = equipments,
+       super._();
 
   @override
   final String id;
@@ -1652,13 +1788,20 @@ class _$KitImpl extends _Kit {
             (identical(other.stackable, stackable) ||
                 other.stackable == stackable) &&
             (identical(other.gear, gear) || other.gear == gear) &&
-            const DeepCollectionEquality()
-                .equals(other._equipments, _equipments));
+            const DeepCollectionEquality().equals(
+              other._equipments,
+              _equipments,
+            ));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, stackable, gear,
-      const DeepCollectionEquality().hash(_equipments));
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    stackable,
+    gear,
+    const DeepCollectionEquality().hash(_equipments),
+  );
 
   /// Create a copy of Kit
   /// with the given fields replaced by the non-null parameter values.
@@ -1670,11 +1813,12 @@ class _$KitImpl extends _Kit {
 }
 
 abstract class _Kit extends Kit {
-  const factory _Kit(
-      {required final String id,
-      required final bool stackable,
-      required final Gear gear,
-      required final List<Equipment>? equipments}) = _$KitImpl;
+  const factory _Kit({
+    required final String id,
+    required final bool stackable,
+    required final Gear gear,
+    required final List<Equipment>? equipments,
+  }) = _$KitImpl;
   const _Kit._() : super._();
 
   @override
@@ -1730,20 +1874,22 @@ class _$StuffCopyWithImpl<$Res, $Val extends Stuff>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? gear = null,
-    Object? equipment = freezed,
-  }) {
-    return _then(_value.copyWith(
-      gear: null == gear
-          ? _value.gear
-          : gear // ignore: cast_nullable_to_non_nullable
-              as Gear,
-      equipment: freezed == equipment
-          ? _value.equipment
-          : equipment // ignore: cast_nullable_to_non_nullable
-              as Equipment?,
-    ) as $Val);
+  $Res call({Object? gear = null, Object? equipment = freezed}) {
+    return _then(
+      _value.copyWith(
+            gear:
+                null == gear
+                    ? _value.gear
+                    : gear // ignore: cast_nullable_to_non_nullable
+                        as Gear,
+            equipment:
+                freezed == equipment
+                    ? _value.equipment
+                    : equipment // ignore: cast_nullable_to_non_nullable
+                        as Equipment?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of Stuff
@@ -1774,8 +1920,9 @@ class _$StuffCopyWithImpl<$Res, $Val extends Stuff>
 /// @nodoc
 abstract class _$$StuffImplCopyWith<$Res> implements $StuffCopyWith<$Res> {
   factory _$$StuffImplCopyWith(
-          _$StuffImpl value, $Res Function(_$StuffImpl) then) =
-      __$$StuffImplCopyWithImpl<$Res>;
+    _$StuffImpl value,
+    $Res Function(_$StuffImpl) then,
+  ) = __$$StuffImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Gear gear, Equipment? equipment});
@@ -1791,27 +1938,29 @@ class __$$StuffImplCopyWithImpl<$Res>
     extends _$StuffCopyWithImpl<$Res, _$StuffImpl>
     implements _$$StuffImplCopyWith<$Res> {
   __$$StuffImplCopyWithImpl(
-      _$StuffImpl _value, $Res Function(_$StuffImpl) _then)
-      : super(_value, _then);
+    _$StuffImpl _value,
+    $Res Function(_$StuffImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Stuff
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? gear = null,
-    Object? equipment = freezed,
-  }) {
-    return _then(_$StuffImpl(
-      gear: null == gear
-          ? _value.gear
-          : gear // ignore: cast_nullable_to_non_nullable
-              as Gear,
-      equipment: freezed == equipment
-          ? _value.equipment
-          : equipment // ignore: cast_nullable_to_non_nullable
-              as Equipment?,
-    ));
+  $Res call({Object? gear = null, Object? equipment = freezed}) {
+    return _then(
+      _$StuffImpl(
+        gear:
+            null == gear
+                ? _value.gear
+                : gear // ignore: cast_nullable_to_non_nullable
+                    as Gear,
+        equipment:
+            freezed == equipment
+                ? _value.equipment
+                : equipment // ignore: cast_nullable_to_non_nullable
+                    as Equipment?,
+      ),
+    );
   }
 }
 
@@ -1853,9 +2002,10 @@ class _$StuffImpl extends _Stuff {
 }
 
 abstract class _Stuff extends Stuff {
-  const factory _Stuff(
-      {required final Gear gear,
-      required final Equipment? equipment}) = _$StuffImpl;
+  const factory _Stuff({
+    required final Gear gear,
+    required final Equipment? equipment,
+  }) = _$StuffImpl;
   const _Stuff._() : super._();
 
   @override

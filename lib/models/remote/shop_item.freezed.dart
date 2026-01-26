@@ -12,7 +12,8 @@ part of 'shop_item.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ShopItem _$ShopItemFromJson(Map<String, dynamic> json) {
   return _ShopItem.fromJson(json);
@@ -28,9 +29,9 @@ mixin _$ShopItem {
   @JsonKey(name: "cost_EP")
   int get costEp => throw _privateConstructorUsedError;
   @JsonKey(name: "name")
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: "icon")
-  String get icon => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
   @StringToIntConverter()
   @JsonKey(name: "buy_Limit")
   int get buyLimit => throw _privateConstructorUsedError;
@@ -38,7 +39,7 @@ mixin _$ShopItem {
   @JsonKey(name: "cost_SSP")
   int get costSsp => throw _privateConstructorUsedError;
   @JsonKey(name: "desc")
-  String get desc => throw _privateConstructorUsedError;
+  String? get desc => throw _privateConstructorUsedError;
   @JsonKey(name: "effectDuration", defaultValue: null)
   @SecondConverterFromStringNullable()
   @protected
@@ -59,19 +60,20 @@ abstract class $ShopItemCopyWith<$Res> {
   factory $ShopItemCopyWith(ShopItem value, $Res Function(ShopItem) then) =
       _$ShopItemCopyWithImpl<$Res, ShopItem>;
   @useResult
-  $Res call(
-      {String documentId,
-      @StringToShopItemIdConverter() @JsonKey(name: "ID") ShopItemId id,
-      @StringToIntConverter() @JsonKey(name: "cost_EP") int costEp,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "icon") String icon,
-      @StringToIntConverter() @JsonKey(name: "buy_Limit") int buyLimit,
-      @StringToIntConverter() @JsonKey(name: "cost_SSP") int costSsp,
-      @JsonKey(name: "desc") String desc,
-      @JsonKey(name: "effectDuration", defaultValue: null)
-      @SecondConverterFromStringNullable()
-      @protected
-      Duration? effectDuration});
+  $Res call({
+    String documentId,
+    @StringToShopItemIdConverter() @JsonKey(name: "ID") ShopItemId id,
+    @StringToIntConverter() @JsonKey(name: "cost_EP") int costEp,
+    @JsonKey(name: "name") String? name,
+    @JsonKey(name: "icon") String? icon,
+    @StringToIntConverter() @JsonKey(name: "buy_Limit") int buyLimit,
+    @StringToIntConverter() @JsonKey(name: "cost_SSP") int costSsp,
+    @JsonKey(name: "desc") String? desc,
+    @JsonKey(name: "effectDuration", defaultValue: null)
+    @SecondConverterFromStringNullable()
+    @protected
+    Duration? effectDuration,
+  });
 }
 
 /// @nodoc
@@ -92,51 +94,63 @@ class _$ShopItemCopyWithImpl<$Res, $Val extends ShopItem>
     Object? documentId = null,
     Object? id = null,
     Object? costEp = null,
-    Object? name = null,
-    Object? icon = null,
+    Object? name = freezed,
+    Object? icon = freezed,
     Object? buyLimit = null,
     Object? costSsp = null,
-    Object? desc = null,
+    Object? desc = freezed,
     Object? effectDuration = freezed,
   }) {
-    return _then(_value.copyWith(
-      documentId: null == documentId
-          ? _value.documentId
-          : documentId // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as ShopItemId,
-      costEp: null == costEp
-          ? _value.costEp
-          : costEp // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      buyLimit: null == buyLimit
-          ? _value.buyLimit
-          : buyLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      costSsp: null == costSsp
-          ? _value.costSsp
-          : costSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      desc: null == desc
-          ? _value.desc
-          : desc // ignore: cast_nullable_to_non_nullable
-              as String,
-      effectDuration: freezed == effectDuration
-          ? _value.effectDuration
-          : effectDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            documentId:
+                null == documentId
+                    ? _value.documentId
+                    : documentId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as ShopItemId,
+            costEp:
+                null == costEp
+                    ? _value.costEp
+                    : costEp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            icon:
+                freezed == icon
+                    ? _value.icon
+                    : icon // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            buyLimit:
+                null == buyLimit
+                    ? _value.buyLimit
+                    : buyLimit // ignore: cast_nullable_to_non_nullable
+                        as int,
+            costSsp:
+                null == costSsp
+                    ? _value.costSsp
+                    : costSsp // ignore: cast_nullable_to_non_nullable
+                        as int,
+            desc:
+                freezed == desc
+                    ? _value.desc
+                    : desc // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            effectDuration:
+                freezed == effectDuration
+                    ? _value.effectDuration
+                    : effectDuration // ignore: cast_nullable_to_non_nullable
+                        as Duration?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -144,23 +158,25 @@ class _$ShopItemCopyWithImpl<$Res, $Val extends ShopItem>
 abstract class _$$ShopItemImplCopyWith<$Res>
     implements $ShopItemCopyWith<$Res> {
   factory _$$ShopItemImplCopyWith(
-          _$ShopItemImpl value, $Res Function(_$ShopItemImpl) then) =
-      __$$ShopItemImplCopyWithImpl<$Res>;
+    _$ShopItemImpl value,
+    $Res Function(_$ShopItemImpl) then,
+  ) = __$$ShopItemImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String documentId,
-      @StringToShopItemIdConverter() @JsonKey(name: "ID") ShopItemId id,
-      @StringToIntConverter() @JsonKey(name: "cost_EP") int costEp,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "icon") String icon,
-      @StringToIntConverter() @JsonKey(name: "buy_Limit") int buyLimit,
-      @StringToIntConverter() @JsonKey(name: "cost_SSP") int costSsp,
-      @JsonKey(name: "desc") String desc,
-      @JsonKey(name: "effectDuration", defaultValue: null)
-      @SecondConverterFromStringNullable()
-      @protected
-      Duration? effectDuration});
+  $Res call({
+    String documentId,
+    @StringToShopItemIdConverter() @JsonKey(name: "ID") ShopItemId id,
+    @StringToIntConverter() @JsonKey(name: "cost_EP") int costEp,
+    @JsonKey(name: "name") String? name,
+    @JsonKey(name: "icon") String? icon,
+    @StringToIntConverter() @JsonKey(name: "buy_Limit") int buyLimit,
+    @StringToIntConverter() @JsonKey(name: "cost_SSP") int costSsp,
+    @JsonKey(name: "desc") String? desc,
+    @JsonKey(name: "effectDuration", defaultValue: null)
+    @SecondConverterFromStringNullable()
+    @protected
+    Duration? effectDuration,
+  });
 }
 
 /// @nodoc
@@ -168,8 +184,9 @@ class __$$ShopItemImplCopyWithImpl<$Res>
     extends _$ShopItemCopyWithImpl<$Res, _$ShopItemImpl>
     implements _$$ShopItemImplCopyWith<$Res> {
   __$$ShopItemImplCopyWithImpl(
-      _$ShopItemImpl _value, $Res Function(_$ShopItemImpl) _then)
-      : super(_value, _then);
+    _$ShopItemImpl _value,
+    $Res Function(_$ShopItemImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ShopItem
   /// with the given fields replaced by the non-null parameter values.
@@ -179,73 +196,82 @@ class __$$ShopItemImplCopyWithImpl<$Res>
     Object? documentId = null,
     Object? id = null,
     Object? costEp = null,
-    Object? name = null,
-    Object? icon = null,
+    Object? name = freezed,
+    Object? icon = freezed,
     Object? buyLimit = null,
     Object? costSsp = null,
-    Object? desc = null,
+    Object? desc = freezed,
     Object? effectDuration = freezed,
   }) {
-    return _then(_$ShopItemImpl(
-      documentId: null == documentId
-          ? _value.documentId
-          : documentId // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as ShopItemId,
-      costEp: null == costEp
-          ? _value.costEp
-          : costEp // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      icon: null == icon
-          ? _value.icon
-          : icon // ignore: cast_nullable_to_non_nullable
-              as String,
-      buyLimit: null == buyLimit
-          ? _value.buyLimit
-          : buyLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-      costSsp: null == costSsp
-          ? _value.costSsp
-          : costSsp // ignore: cast_nullable_to_non_nullable
-              as int,
-      desc: null == desc
-          ? _value.desc
-          : desc // ignore: cast_nullable_to_non_nullable
-              as String,
-      effectDuration: freezed == effectDuration
-          ? _value.effectDuration
-          : effectDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
-    ));
+    return _then(
+      _$ShopItemImpl(
+        documentId:
+            null == documentId
+                ? _value.documentId
+                : documentId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as ShopItemId,
+        costEp:
+            null == costEp
+                ? _value.costEp
+                : costEp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        icon:
+            freezed == icon
+                ? _value.icon
+                : icon // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        buyLimit:
+            null == buyLimit
+                ? _value.buyLimit
+                : buyLimit // ignore: cast_nullable_to_non_nullable
+                    as int,
+        costSsp:
+            null == costSsp
+                ? _value.costSsp
+                : costSsp // ignore: cast_nullable_to_non_nullable
+                    as int,
+        desc:
+            freezed == desc
+                ? _value.desc
+                : desc // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        effectDuration:
+            freezed == effectDuration
+                ? _value.effectDuration
+                : effectDuration // ignore: cast_nullable_to_non_nullable
+                    as Duration?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ShopItemImpl extends _ShopItem {
-  const _$ShopItemImpl(
-      {required this.documentId,
-      @StringToShopItemIdConverter() @JsonKey(name: "ID") required this.id,
-      @StringToIntConverter() @JsonKey(name: "cost_EP") required this.costEp,
-      @JsonKey(name: "name") required this.name,
-      @JsonKey(name: "icon") required this.icon,
-      @StringToIntConverter()
-      @JsonKey(name: "buy_Limit")
-      required this.buyLimit,
-      @StringToIntConverter() @JsonKey(name: "cost_SSP") required this.costSsp,
-      @JsonKey(name: "desc") required this.desc,
-      @JsonKey(name: "effectDuration", defaultValue: null)
-      @SecondConverterFromStringNullable()
-      @protected
-      this.effectDuration})
-      : super._();
+  const _$ShopItemImpl({
+    required this.documentId,
+    @StringToShopItemIdConverter() @JsonKey(name: "ID") required this.id,
+    @StringToIntConverter() @JsonKey(name: "cost_EP") required this.costEp,
+    @JsonKey(name: "name") this.name,
+    @JsonKey(name: "icon") this.icon,
+    @StringToIntConverter() @JsonKey(name: "buy_Limit") required this.buyLimit,
+    @StringToIntConverter() @JsonKey(name: "cost_SSP") required this.costSsp,
+    @JsonKey(name: "desc") this.desc,
+    @JsonKey(name: "effectDuration", defaultValue: null)
+    @SecondConverterFromStringNullable()
+    @protected
+    this.effectDuration,
+  }) : super._();
 
   factory _$ShopItemImpl.fromJson(Map<String, dynamic> json) =>
       _$$ShopItemImplFromJson(json);
@@ -262,10 +288,10 @@ class _$ShopItemImpl extends _ShopItem {
   final int costEp;
   @override
   @JsonKey(name: "name")
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: "icon")
-  final String icon;
+  final String? icon;
   @override
   @StringToIntConverter()
   @JsonKey(name: "buy_Limit")
@@ -276,7 +302,7 @@ class _$ShopItemImpl extends _ShopItem {
   final int costSsp;
   @override
   @JsonKey(name: "desc")
-  final String desc;
+  final String? desc;
   @override
   @JsonKey(name: "effectDuration", defaultValue: null)
   @SecondConverterFromStringNullable()
@@ -309,8 +335,18 @@ class _$ShopItemImpl extends _ShopItem {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, documentId, id, costEp, name,
-      icon, buyLimit, costSsp, desc, effectDuration);
+  int get hashCode => Object.hash(
+    runtimeType,
+    documentId,
+    id,
+    costEp,
+    name,
+    icon,
+    buyLimit,
+    costSsp,
+    desc,
+    effectDuration,
+  );
 
   /// Create a copy of ShopItem
   /// with the given fields replaced by the non-null parameter values.
@@ -322,34 +358,31 @@ class _$ShopItemImpl extends _ShopItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ShopItemImplToJson(
-      this,
-    );
+    return _$$ShopItemImplToJson(this);
   }
 }
 
 abstract class _ShopItem extends ShopItem {
-  const factory _ShopItem(
-      {required final String documentId,
-      @StringToShopItemIdConverter()
-      @JsonKey(name: "ID")
-      required final ShopItemId id,
-      @StringToIntConverter()
-      @JsonKey(name: "cost_EP")
-      required final int costEp,
-      @JsonKey(name: "name") required final String name,
-      @JsonKey(name: "icon") required final String icon,
-      @StringToIntConverter()
-      @JsonKey(name: "buy_Limit")
-      required final int buyLimit,
-      @StringToIntConverter()
-      @JsonKey(name: "cost_SSP")
-      required final int costSsp,
-      @JsonKey(name: "desc") required final String desc,
-      @JsonKey(name: "effectDuration", defaultValue: null)
-      @SecondConverterFromStringNullable()
-      @protected
-      final Duration? effectDuration}) = _$ShopItemImpl;
+  const factory _ShopItem({
+    required final String documentId,
+    @StringToShopItemIdConverter()
+    @JsonKey(name: "ID")
+    required final ShopItemId id,
+    @StringToIntConverter() @JsonKey(name: "cost_EP") required final int costEp,
+    @JsonKey(name: "name") final String? name,
+    @JsonKey(name: "icon") final String? icon,
+    @StringToIntConverter()
+    @JsonKey(name: "buy_Limit")
+    required final int buyLimit,
+    @StringToIntConverter()
+    @JsonKey(name: "cost_SSP")
+    required final int costSsp,
+    @JsonKey(name: "desc") final String? desc,
+    @JsonKey(name: "effectDuration", defaultValue: null)
+    @SecondConverterFromStringNullable()
+    @protected
+    final Duration? effectDuration,
+  }) = _$ShopItemImpl;
   const _ShopItem._() : super._();
 
   factory _ShopItem.fromJson(Map<String, dynamic> json) =
@@ -367,10 +400,10 @@ abstract class _ShopItem extends ShopItem {
   int get costEp;
   @override
   @JsonKey(name: "name")
-  String get name;
+  String? get name;
   @override
   @JsonKey(name: "icon")
-  String get icon;
+  String? get icon;
   @override
   @StringToIntConverter()
   @JsonKey(name: "buy_Limit")
@@ -381,7 +414,7 @@ abstract class _ShopItem extends ShopItem {
   int get costSsp;
   @override
   @JsonKey(name: "desc")
-  String get desc;
+  String? get desc;
   @override
   @JsonKey(name: "effectDuration", defaultValue: null)
   @SecondConverterFromStringNullable()
@@ -416,16 +449,18 @@ mixin _$AdjustedItem {
 /// @nodoc
 abstract class $AdjustedItemCopyWith<$Res> {
   factory $AdjustedItemCopyWith(
-          AdjustedItem value, $Res Function(AdjustedItem) then) =
-      _$AdjustedItemCopyWithImpl<$Res, AdjustedItem>;
+    AdjustedItem value,
+    $Res Function(AdjustedItem) then,
+  ) = _$AdjustedItemCopyWithImpl<$Res, AdjustedItem>;
   @useResult
-  $Res call(
-      {ShopItemId id,
-      bool exist,
-      bool canBuy,
-      DateTime now,
-      int todayBuyCount,
-      @SecondConverterFromStringNullable() Duration? remainEffectiveDuration});
+  $Res call({
+    ShopItemId id,
+    bool exist,
+    bool canBuy,
+    DateTime now,
+    int todayBuyCount,
+    @SecondConverterFromStringNullable() Duration? remainEffectiveDuration,
+  });
 }
 
 /// @nodoc
@@ -450,32 +485,41 @@ class _$AdjustedItemCopyWithImpl<$Res, $Val extends AdjustedItem>
     Object? todayBuyCount = null,
     Object? remainEffectiveDuration = freezed,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as ShopItemId,
-      exist: null == exist
-          ? _value.exist
-          : exist // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canBuy: null == canBuy
-          ? _value.canBuy
-          : canBuy // ignore: cast_nullable_to_non_nullable
-              as bool,
-      now: null == now
-          ? _value.now
-          : now // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      todayBuyCount: null == todayBuyCount
-          ? _value.todayBuyCount
-          : todayBuyCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      remainEffectiveDuration: freezed == remainEffectiveDuration
-          ? _value.remainEffectiveDuration
-          : remainEffectiveDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as ShopItemId,
+            exist:
+                null == exist
+                    ? _value.exist
+                    : exist // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            canBuy:
+                null == canBuy
+                    ? _value.canBuy
+                    : canBuy // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            now:
+                null == now
+                    ? _value.now
+                    : now // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            todayBuyCount:
+                null == todayBuyCount
+                    ? _value.todayBuyCount
+                    : todayBuyCount // ignore: cast_nullable_to_non_nullable
+                        as int,
+            remainEffectiveDuration:
+                freezed == remainEffectiveDuration
+                    ? _value.remainEffectiveDuration
+                    : remainEffectiveDuration // ignore: cast_nullable_to_non_nullable
+                        as Duration?,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -483,17 +527,19 @@ class _$AdjustedItemCopyWithImpl<$Res, $Val extends AdjustedItem>
 abstract class _$$AdjustedItemImplCopyWith<$Res>
     implements $AdjustedItemCopyWith<$Res> {
   factory _$$AdjustedItemImplCopyWith(
-          _$AdjustedItemImpl value, $Res Function(_$AdjustedItemImpl) then) =
-      __$$AdjustedItemImplCopyWithImpl<$Res>;
+    _$AdjustedItemImpl value,
+    $Res Function(_$AdjustedItemImpl) then,
+  ) = __$$AdjustedItemImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ShopItemId id,
-      bool exist,
-      bool canBuy,
-      DateTime now,
-      int todayBuyCount,
-      @SecondConverterFromStringNullable() Duration? remainEffectiveDuration});
+  $Res call({
+    ShopItemId id,
+    bool exist,
+    bool canBuy,
+    DateTime now,
+    int todayBuyCount,
+    @SecondConverterFromStringNullable() Duration? remainEffectiveDuration,
+  });
 }
 
 /// @nodoc
@@ -501,8 +547,9 @@ class __$$AdjustedItemImplCopyWithImpl<$Res>
     extends _$AdjustedItemCopyWithImpl<$Res, _$AdjustedItemImpl>
     implements _$$AdjustedItemImplCopyWith<$Res> {
   __$$AdjustedItemImplCopyWithImpl(
-      _$AdjustedItemImpl _value, $Res Function(_$AdjustedItemImpl) _then)
-      : super(_value, _then);
+    _$AdjustedItemImpl _value,
+    $Res Function(_$AdjustedItemImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AdjustedItem
   /// with the given fields replaced by the non-null parameter values.
@@ -516,46 +563,54 @@ class __$$AdjustedItemImplCopyWithImpl<$Res>
     Object? todayBuyCount = null,
     Object? remainEffectiveDuration = freezed,
   }) {
-    return _then(_$AdjustedItemImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as ShopItemId,
-      exist: null == exist
-          ? _value.exist
-          : exist // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canBuy: null == canBuy
-          ? _value.canBuy
-          : canBuy // ignore: cast_nullable_to_non_nullable
-              as bool,
-      now: null == now
-          ? _value.now
-          : now // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      todayBuyCount: null == todayBuyCount
-          ? _value.todayBuyCount
-          : todayBuyCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      remainEffectiveDuration: freezed == remainEffectiveDuration
-          ? _value.remainEffectiveDuration
-          : remainEffectiveDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
-    ));
+    return _then(
+      _$AdjustedItemImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as ShopItemId,
+        exist:
+            null == exist
+                ? _value.exist
+                : exist // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        canBuy:
+            null == canBuy
+                ? _value.canBuy
+                : canBuy // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        now:
+            null == now
+                ? _value.now
+                : now // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        todayBuyCount:
+            null == todayBuyCount
+                ? _value.todayBuyCount
+                : todayBuyCount // ignore: cast_nullable_to_non_nullable
+                    as int,
+        remainEffectiveDuration:
+            freezed == remainEffectiveDuration
+                ? _value.remainEffectiveDuration
+                : remainEffectiveDuration // ignore: cast_nullable_to_non_nullable
+                    as Duration?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$AdjustedItemImpl extends _AdjustedItem {
-  const _$AdjustedItemImpl(
-      {required this.id,
-      required this.exist,
-      required this.canBuy,
-      required this.now,
-      required this.todayBuyCount,
-      @SecondConverterFromStringNullable() this.remainEffectiveDuration})
-      : super._();
+  const _$AdjustedItemImpl({
+    required this.id,
+    required this.exist,
+    required this.canBuy,
+    required this.now,
+    required this.todayBuyCount,
+    @SecondConverterFromStringNullable() this.remainEffectiveDuration,
+  }) : super._();
 
   @override
   final ShopItemId id;
@@ -588,13 +643,22 @@ class _$AdjustedItemImpl extends _AdjustedItem {
             (identical(other.todayBuyCount, todayBuyCount) ||
                 other.todayBuyCount == todayBuyCount) &&
             (identical(
-                    other.remainEffectiveDuration, remainEffectiveDuration) ||
+                  other.remainEffectiveDuration,
+                  remainEffectiveDuration,
+                ) ||
                 other.remainEffectiveDuration == remainEffectiveDuration));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, exist, canBuy, now,
-      todayBuyCount, remainEffectiveDuration);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    exist,
+    canBuy,
+    now,
+    todayBuyCount,
+    remainEffectiveDuration,
+  );
 
   /// Create a copy of AdjustedItem
   /// with the given fields replaced by the non-null parameter values.
@@ -606,14 +670,15 @@ class _$AdjustedItemImpl extends _AdjustedItem {
 }
 
 abstract class _AdjustedItem extends AdjustedItem {
-  const factory _AdjustedItem(
-      {required final ShopItemId id,
-      required final bool exist,
-      required final bool canBuy,
-      required final DateTime now,
-      required final int todayBuyCount,
-      @SecondConverterFromStringNullable()
-      final Duration? remainEffectiveDuration}) = _$AdjustedItemImpl;
+  const factory _AdjustedItem({
+    required final ShopItemId id,
+    required final bool exist,
+    required final bool canBuy,
+    required final DateTime now,
+    required final int todayBuyCount,
+    @SecondConverterFromStringNullable()
+    final Duration? remainEffectiveDuration,
+  }) = _$AdjustedItemImpl;
   const _AdjustedItem._() : super._();
 
   @override

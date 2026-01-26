@@ -11,13 +11,14 @@ _$ShopItemImpl _$$ShopItemImplFromJson(Map<String, dynamic> json) =>
       documentId: json['documentId'] as String,
       id: const StringToShopItemIdConverter().fromJson(json['ID']),
       costEp: const StringToIntConverter().fromJson(json['cost_EP']),
-      name: json['name'] as String,
-      icon: json['icon'] as String,
+      name: json['name'] as String?,
+      icon: json['icon'] as String?,
       buyLimit: const StringToIntConverter().fromJson(json['buy_Limit']),
       costSsp: const StringToIntConverter().fromJson(json['cost_SSP']),
-      desc: json['desc'] as String,
-      effectDuration: const SecondConverterFromStringNullable()
-          .fromJson(json['effectDuration']),
+      desc: json['desc'] as String?,
+      effectDuration: const SecondConverterFromStringNullable().fromJson(
+        json['effectDuration'],
+      ),
     );
 
 Map<String, dynamic> _$$ShopItemImplToJson(_$ShopItemImpl instance) =>
@@ -30,6 +31,7 @@ Map<String, dynamic> _$$ShopItemImplToJson(_$ShopItemImpl instance) =>
       'buy_Limit': const StringToIntConverter().toJson(instance.buyLimit),
       'cost_SSP': const StringToIntConverter().toJson(instance.costSsp),
       'desc': instance.desc,
-      'effectDuration': const SecondConverterFromStringNullable()
-          .toJson(instance.effectDuration),
+      'effectDuration': const SecondConverterFromStringNullable().toJson(
+        instance.effectDuration,
+      ),
     };

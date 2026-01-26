@@ -12,7 +12,8 @@ part of 'play_list.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PlayList _$PlayListFromJson(Map<String, dynamic> json) {
   return _PlayList.fromJson(json);
@@ -50,16 +51,15 @@ abstract class $PlayListCopyWith<$Res> {
   factory $PlayListCopyWith(PlayList value, $Res Function(PlayList) then) =
       _$PlayListCopyWithImpl<$Res, PlayList>;
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(name: "playListId") String playListId,
-      @JsonKey(name: "url") String url,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "thumbnail") String thumbnail,
-      @JsonKey(name: "videos") List<Video> videos,
-      @JsonKey(name: "totalDuration")
-      @SecondConverter()
-      Duration totalDuration});
+  $Res call({
+    String id,
+    @JsonKey(name: "playListId") String playListId,
+    @JsonKey(name: "url") String url,
+    @JsonKey(name: "title") String title,
+    @JsonKey(name: "thumbnail") String thumbnail,
+    @JsonKey(name: "videos") List<Video> videos,
+    @JsonKey(name: "totalDuration") @SecondConverter() Duration totalDuration,
+  });
 }
 
 /// @nodoc
@@ -85,36 +85,46 @@ class _$PlayListCopyWithImpl<$Res, $Val extends PlayList>
     Object? videos = null,
     Object? totalDuration = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      playListId: null == playListId
-          ? _value.playListId
-          : playListId // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      thumbnail: null == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String,
-      videos: null == videos
-          ? _value.videos
-          : videos // ignore: cast_nullable_to_non_nullable
-              as List<Video>,
-      totalDuration: null == totalDuration
-          ? _value.totalDuration
-          : totalDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            playListId:
+                null == playListId
+                    ? _value.playListId
+                    : playListId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                null == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            thumbnail:
+                null == thumbnail
+                    ? _value.thumbnail
+                    : thumbnail // ignore: cast_nullable_to_non_nullable
+                        as String,
+            videos:
+                null == videos
+                    ? _value.videos
+                    : videos // ignore: cast_nullable_to_non_nullable
+                        as List<Video>,
+            totalDuration:
+                null == totalDuration
+                    ? _value.totalDuration
+                    : totalDuration // ignore: cast_nullable_to_non_nullable
+                        as Duration,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -122,20 +132,20 @@ class _$PlayListCopyWithImpl<$Res, $Val extends PlayList>
 abstract class _$$PlayListImplCopyWith<$Res>
     implements $PlayListCopyWith<$Res> {
   factory _$$PlayListImplCopyWith(
-          _$PlayListImpl value, $Res Function(_$PlayListImpl) then) =
-      __$$PlayListImplCopyWithImpl<$Res>;
+    _$PlayListImpl value,
+    $Res Function(_$PlayListImpl) then,
+  ) = __$$PlayListImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @JsonKey(name: "playListId") String playListId,
-      @JsonKey(name: "url") String url,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "thumbnail") String thumbnail,
-      @JsonKey(name: "videos") List<Video> videos,
-      @JsonKey(name: "totalDuration")
-      @SecondConverter()
-      Duration totalDuration});
+  $Res call({
+    String id,
+    @JsonKey(name: "playListId") String playListId,
+    @JsonKey(name: "url") String url,
+    @JsonKey(name: "title") String title,
+    @JsonKey(name: "thumbnail") String thumbnail,
+    @JsonKey(name: "videos") List<Video> videos,
+    @JsonKey(name: "totalDuration") @SecondConverter() Duration totalDuration,
+  });
 }
 
 /// @nodoc
@@ -143,8 +153,9 @@ class __$$PlayListImplCopyWithImpl<$Res>
     extends _$PlayListCopyWithImpl<$Res, _$PlayListImpl>
     implements _$$PlayListImplCopyWith<$Res> {
   __$$PlayListImplCopyWithImpl(
-      _$PlayListImpl _value, $Res Function(_$PlayListImpl) _then)
-      : super(_value, _then);
+    _$PlayListImpl _value,
+    $Res Function(_$PlayListImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PlayList
   /// with the given fields replaced by the non-null parameter values.
@@ -159,54 +170,63 @@ class __$$PlayListImplCopyWithImpl<$Res>
     Object? videos = null,
     Object? totalDuration = null,
   }) {
-    return _then(_$PlayListImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      playListId: null == playListId
-          ? _value.playListId
-          : playListId // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      thumbnail: null == thumbnail
-          ? _value.thumbnail
-          : thumbnail // ignore: cast_nullable_to_non_nullable
-              as String,
-      videos: null == videos
-          ? _value._videos
-          : videos // ignore: cast_nullable_to_non_nullable
-              as List<Video>,
-      totalDuration: null == totalDuration
-          ? _value.totalDuration
-          : totalDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-    ));
+    return _then(
+      _$PlayListImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playListId:
+            null == playListId
+                ? _value.playListId
+                : playListId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        thumbnail:
+            null == thumbnail
+                ? _value.thumbnail
+                : thumbnail // ignore: cast_nullable_to_non_nullable
+                    as String,
+        videos:
+            null == videos
+                ? _value._videos
+                : videos // ignore: cast_nullable_to_non_nullable
+                    as List<Video>,
+        totalDuration:
+            null == totalDuration
+                ? _value.totalDuration
+                : totalDuration // ignore: cast_nullable_to_non_nullable
+                    as Duration,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PlayListImpl extends _PlayList {
-  const _$PlayListImpl(
-      {required this.id,
-      @JsonKey(name: "playListId") required this.playListId,
-      @JsonKey(name: "url") required this.url,
-      @JsonKey(name: "title") required this.title,
-      @JsonKey(name: "thumbnail") required this.thumbnail,
-      @JsonKey(name: "videos") required final List<Video> videos,
-      @JsonKey(name: "totalDuration")
-      @SecondConverter()
-      required this.totalDuration})
-      : _videos = videos,
-        super._();
+  const _$PlayListImpl({
+    required this.id,
+    @JsonKey(name: "playListId") required this.playListId,
+    @JsonKey(name: "url") required this.url,
+    @JsonKey(name: "title") required this.title,
+    @JsonKey(name: "thumbnail") required this.thumbnail,
+    @JsonKey(name: "videos") required final List<Video> videos,
+    @JsonKey(name: "totalDuration")
+    @SecondConverter()
+    required this.totalDuration,
+  }) : _videos = videos,
+       super._();
 
   factory _$PlayListImpl.fromJson(Map<String, dynamic> json) =>
       _$$PlayListImplFromJson(json);
@@ -263,8 +283,16 @@ class _$PlayListImpl extends _PlayList {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, playListId, url, title,
-      thumbnail, const DeepCollectionEquality().hash(_videos), totalDuration);
+  int get hashCode => Object.hash(
+    runtimeType,
+    id,
+    playListId,
+    url,
+    title,
+    thumbnail,
+    const DeepCollectionEquality().hash(_videos),
+    totalDuration,
+  );
 
   /// Create a copy of PlayList
   /// with the given fields replaced by the non-null parameter values.
@@ -276,23 +304,22 @@ class _$PlayListImpl extends _PlayList {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlayListImplToJson(
-      this,
-    );
+    return _$$PlayListImplToJson(this);
   }
 }
 
 abstract class _PlayList extends PlayList {
-  const factory _PlayList(
-      {required final String id,
-      @JsonKey(name: "playListId") required final String playListId,
-      @JsonKey(name: "url") required final String url,
-      @JsonKey(name: "title") required final String title,
-      @JsonKey(name: "thumbnail") required final String thumbnail,
-      @JsonKey(name: "videos") required final List<Video> videos,
-      @JsonKey(name: "totalDuration")
-      @SecondConverter()
-      required final Duration totalDuration}) = _$PlayListImpl;
+  const factory _PlayList({
+    required final String id,
+    @JsonKey(name: "playListId") required final String playListId,
+    @JsonKey(name: "url") required final String url,
+    @JsonKey(name: "title") required final String title,
+    @JsonKey(name: "thumbnail") required final String thumbnail,
+    @JsonKey(name: "videos") required final List<Video> videos,
+    @JsonKey(name: "totalDuration")
+    @SecondConverter()
+    required final Duration totalDuration,
+  }) = _$PlayListImpl;
   const _PlayList._() : super._();
 
   factory _PlayList.fromJson(Map<String, dynamic> json) =
@@ -363,15 +390,16 @@ abstract class $VideoCopyWith<$Res> {
   factory $VideoCopyWith(Video value, $Res Function(Video) then) =
       _$VideoCopyWithImpl<$Res, Video>;
   @useResult
-  $Res call(
-      {@JsonKey(name: "id") String id,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "url") String url,
-      @JsonKey(name: "limitLevel") int limitLevel,
-      @SecondConverter()
-      @JsonKey(name: "limitPlayDuration")
-      Duration limitPlayDuration,
-      @JsonKey(name: "duration") @SecondConverter() Duration duration});
+  $Res call({
+    @JsonKey(name: "id") String id,
+    @JsonKey(name: "title") String title,
+    @JsonKey(name: "url") String url,
+    @JsonKey(name: "limitLevel") int limitLevel,
+    @SecondConverter()
+    @JsonKey(name: "limitPlayDuration")
+    Duration limitPlayDuration,
+    @JsonKey(name: "duration") @SecondConverter() Duration duration,
+  });
 }
 
 /// @nodoc
@@ -396,51 +424,62 @@ class _$VideoCopyWithImpl<$Res, $Val extends Video>
     Object? limitPlayDuration = null,
     Object? duration = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      limitLevel: null == limitLevel
-          ? _value.limitLevel
-          : limitLevel // ignore: cast_nullable_to_non_nullable
-              as int,
-      limitPlayDuration: null == limitPlayDuration
-          ? _value.limitPlayDuration
-          : limitPlayDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      duration: null == duration
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                null == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String,
+            limitLevel:
+                null == limitLevel
+                    ? _value.limitLevel
+                    : limitLevel // ignore: cast_nullable_to_non_nullable
+                        as int,
+            limitPlayDuration:
+                null == limitPlayDuration
+                    ? _value.limitPlayDuration
+                    : limitPlayDuration // ignore: cast_nullable_to_non_nullable
+                        as Duration,
+            duration:
+                null == duration
+                    ? _value.duration
+                    : duration // ignore: cast_nullable_to_non_nullable
+                        as Duration,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$VideoImplCopyWith<$Res> implements $VideoCopyWith<$Res> {
   factory _$$VideoImplCopyWith(
-          _$VideoImpl value, $Res Function(_$VideoImpl) then) =
-      __$$VideoImplCopyWithImpl<$Res>;
+    _$VideoImpl value,
+    $Res Function(_$VideoImpl) then,
+  ) = __$$VideoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(name: "id") String id,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "url") String url,
-      @JsonKey(name: "limitLevel") int limitLevel,
-      @SecondConverter()
-      @JsonKey(name: "limitPlayDuration")
-      Duration limitPlayDuration,
-      @JsonKey(name: "duration") @SecondConverter() Duration duration});
+  $Res call({
+    @JsonKey(name: "id") String id,
+    @JsonKey(name: "title") String title,
+    @JsonKey(name: "url") String url,
+    @JsonKey(name: "limitLevel") int limitLevel,
+    @SecondConverter()
+    @JsonKey(name: "limitPlayDuration")
+    Duration limitPlayDuration,
+    @JsonKey(name: "duration") @SecondConverter() Duration duration,
+  });
 }
 
 /// @nodoc
@@ -448,8 +487,9 @@ class __$$VideoImplCopyWithImpl<$Res>
     extends _$VideoCopyWithImpl<$Res, _$VideoImpl>
     implements _$$VideoImplCopyWith<$Res> {
   __$$VideoImplCopyWithImpl(
-      _$VideoImpl _value, $Res Function(_$VideoImpl) _then)
-      : super(_value, _then);
+    _$VideoImpl _value,
+    $Res Function(_$VideoImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Video
   /// with the given fields replaced by the non-null parameter values.
@@ -463,47 +503,56 @@ class __$$VideoImplCopyWithImpl<$Res>
     Object? limitPlayDuration = null,
     Object? duration = null,
   }) {
-    return _then(_$VideoImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String,
-      limitLevel: null == limitLevel
-          ? _value.limitLevel
-          : limitLevel // ignore: cast_nullable_to_non_nullable
-              as int,
-      limitPlayDuration: null == limitPlayDuration
-          ? _value.limitPlayDuration
-          : limitPlayDuration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-      duration: null == duration
-          ? _value.duration
-          : duration // ignore: cast_nullable_to_non_nullable
-              as Duration,
-    ));
+    return _then(
+      _$VideoImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            null == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String,
+        limitLevel:
+            null == limitLevel
+                ? _value.limitLevel
+                : limitLevel // ignore: cast_nullable_to_non_nullable
+                    as int,
+        limitPlayDuration:
+            null == limitPlayDuration
+                ? _value.limitPlayDuration
+                : limitPlayDuration // ignore: cast_nullable_to_non_nullable
+                    as Duration,
+        duration:
+            null == duration
+                ? _value.duration
+                : duration // ignore: cast_nullable_to_non_nullable
+                    as Duration,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$VideoImpl implements _Video {
-  const _$VideoImpl(
-      {@JsonKey(name: "id") required this.id,
-      @JsonKey(name: "title") required this.title,
-      @JsonKey(name: "url") required this.url,
-      @JsonKey(name: "limitLevel") required this.limitLevel,
-      @SecondConverter()
-      @JsonKey(name: "limitPlayDuration")
-      required this.limitPlayDuration,
-      @JsonKey(name: "duration") @SecondConverter() required this.duration});
+  const _$VideoImpl({
+    @JsonKey(name: "id") required this.id,
+    @JsonKey(name: "title") required this.title,
+    @JsonKey(name: "url") required this.url,
+    @JsonKey(name: "limitLevel") required this.limitLevel,
+    @SecondConverter()
+    @JsonKey(name: "limitPlayDuration")
+    required this.limitPlayDuration,
+    @JsonKey(name: "duration") @SecondConverter() required this.duration,
+  });
 
   factory _$VideoImpl.fromJson(Map<String, dynamic> json) =>
       _$$VideoImplFromJson(json);
@@ -553,7 +602,14 @@ class _$VideoImpl implements _Video {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, title, url, limitLevel, limitPlayDuration, duration);
+    runtimeType,
+    id,
+    title,
+    url,
+    limitLevel,
+    limitPlayDuration,
+    duration,
+  );
 
   /// Create a copy of Video
   /// with the given fields replaced by the non-null parameter values.
@@ -565,24 +621,23 @@ class _$VideoImpl implements _Video {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$VideoImplToJson(
-      this,
-    );
+    return _$$VideoImplToJson(this);
   }
 }
 
 abstract class _Video implements Video {
-  const factory _Video(
-      {@JsonKey(name: "id") required final String id,
-      @JsonKey(name: "title") required final String title,
-      @JsonKey(name: "url") required final String url,
-      @JsonKey(name: "limitLevel") required final int limitLevel,
-      @SecondConverter()
-      @JsonKey(name: "limitPlayDuration")
-      required final Duration limitPlayDuration,
-      @JsonKey(name: "duration")
-      @SecondConverter()
-      required final Duration duration}) = _$VideoImpl;
+  const factory _Video({
+    @JsonKey(name: "id") required final String id,
+    @JsonKey(name: "title") required final String title,
+    @JsonKey(name: "url") required final String url,
+    @JsonKey(name: "limitLevel") required final int limitLevel,
+    @SecondConverter()
+    @JsonKey(name: "limitPlayDuration")
+    required final Duration limitPlayDuration,
+    @JsonKey(name: "duration")
+    @SecondConverter()
+    required final Duration duration,
+  }) = _$VideoImpl;
 
   factory _Video.fromJson(Map<String, dynamic> json) = _$VideoImpl.fromJson;
 

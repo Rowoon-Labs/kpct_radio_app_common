@@ -12,7 +12,8 @@ part of 'notice.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Notice _$NoticeFromJson(Map<String, dynamic> json) {
   return _Notice.fromJson(json);
@@ -46,12 +47,13 @@ abstract class $NoticeCopyWith<$Res> {
   factory $NoticeCopyWith(Notice value, $Res Function(Notice) then) =
       _$NoticeCopyWithImpl<$Res, Notice>;
   @useResult
-  $Res call(
-      {String id,
-      @TimestampConverter() @JsonKey(name: "createdAt") DateTime createdAt,
-      @TimestampConverter() @JsonKey(name: "publishAt") DateTime publishAt,
-      @JsonKey(name: "content") String content,
-      @JsonKey(name: "memo") String memo});
+  $Res call({
+    String id,
+    @TimestampConverter() @JsonKey(name: "createdAt") DateTime createdAt,
+    @TimestampConverter() @JsonKey(name: "publishAt") DateTime publishAt,
+    @JsonKey(name: "content") String content,
+    @JsonKey(name: "memo") String memo,
+  });
 }
 
 /// @nodoc
@@ -75,44 +77,54 @@ class _$NoticeCopyWithImpl<$Res, $Val extends Notice>
     Object? content = null,
     Object? memo = null,
   }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      publishAt: null == publishAt
-          ? _value.publishAt
-          : publishAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      memo: null == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            createdAt:
+                null == createdAt
+                    ? _value.createdAt
+                    : createdAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            publishAt:
+                null == publishAt
+                    ? _value.publishAt
+                    : publishAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime,
+            content:
+                null == content
+                    ? _value.content
+                    : content // ignore: cast_nullable_to_non_nullable
+                        as String,
+            memo:
+                null == memo
+                    ? _value.memo
+                    : memo // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$NoticeImplCopyWith<$Res> implements $NoticeCopyWith<$Res> {
   factory _$$NoticeImplCopyWith(
-          _$NoticeImpl value, $Res Function(_$NoticeImpl) then) =
-      __$$NoticeImplCopyWithImpl<$Res>;
+    _$NoticeImpl value,
+    $Res Function(_$NoticeImpl) then,
+  ) = __$$NoticeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id,
-      @TimestampConverter() @JsonKey(name: "createdAt") DateTime createdAt,
-      @TimestampConverter() @JsonKey(name: "publishAt") DateTime publishAt,
-      @JsonKey(name: "content") String content,
-      @JsonKey(name: "memo") String memo});
+  $Res call({
+    String id,
+    @TimestampConverter() @JsonKey(name: "createdAt") DateTime createdAt,
+    @TimestampConverter() @JsonKey(name: "publishAt") DateTime publishAt,
+    @JsonKey(name: "content") String content,
+    @JsonKey(name: "memo") String memo,
+  });
 }
 
 /// @nodoc
@@ -120,8 +132,9 @@ class __$$NoticeImplCopyWithImpl<$Res>
     extends _$NoticeCopyWithImpl<$Res, _$NoticeImpl>
     implements _$$NoticeImplCopyWith<$Res> {
   __$$NoticeImplCopyWithImpl(
-      _$NoticeImpl _value, $Res Function(_$NoticeImpl) _then)
-      : super(_value, _then);
+    _$NoticeImpl _value,
+    $Res Function(_$NoticeImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of Notice
   /// with the given fields replaced by the non-null parameter values.
@@ -134,41 +147,48 @@ class __$$NoticeImplCopyWithImpl<$Res>
     Object? content = null,
     Object? memo = null,
   }) {
-    return _then(_$NoticeImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      publishAt: null == publishAt
-          ? _value.publishAt
-          : publishAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      memo: null == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$NoticeImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        createdAt:
+            null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        publishAt:
+            null == publishAt
+                ? _value.publishAt
+                : publishAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime,
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as String,
+        memo:
+            null == memo
+                ? _value.memo
+                : memo // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$NoticeImpl extends _Notice {
-  const _$NoticeImpl(
-      {required this.id,
-      @TimestampConverter() @JsonKey(name: "createdAt") required this.createdAt,
-      @TimestampConverter() @JsonKey(name: "publishAt") required this.publishAt,
-      @JsonKey(name: "content") required this.content,
-      @JsonKey(name: "memo") required this.memo})
-      : super._();
+  const _$NoticeImpl({
+    required this.id,
+    @TimestampConverter() @JsonKey(name: "createdAt") required this.createdAt,
+    @TimestampConverter() @JsonKey(name: "publishAt") required this.publishAt,
+    @JsonKey(name: "content") required this.content,
+    @JsonKey(name: "memo") required this.memo,
+  }) : super._();
 
   factory _$NoticeImpl.fromJson(Map<String, dynamic> json) =>
       _$$NoticeImplFromJson(json);
@@ -224,23 +244,22 @@ class _$NoticeImpl extends _Notice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NoticeImplToJson(
-      this,
-    );
+    return _$$NoticeImplToJson(this);
   }
 }
 
 abstract class _Notice extends Notice {
-  const factory _Notice(
-      {required final String id,
-      @TimestampConverter()
-      @JsonKey(name: "createdAt")
-      required final DateTime createdAt,
-      @TimestampConverter()
-      @JsonKey(name: "publishAt")
-      required final DateTime publishAt,
-      @JsonKey(name: "content") required final String content,
-      @JsonKey(name: "memo") required final String memo}) = _$NoticeImpl;
+  const factory _Notice({
+    required final String id,
+    @TimestampConverter()
+    @JsonKey(name: "createdAt")
+    required final DateTime createdAt,
+    @TimestampConverter()
+    @JsonKey(name: "publishAt")
+    required final DateTime publishAt,
+    @JsonKey(name: "content") required final String content,
+    @JsonKey(name: "memo") required final String memo,
+  }) = _$NoticeImpl;
   const _Notice._() : super._();
 
   factory _Notice.fromJson(Map<String, dynamic> json) = _$NoticeImpl.fromJson;
