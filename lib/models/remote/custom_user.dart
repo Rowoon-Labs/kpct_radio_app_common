@@ -5,6 +5,8 @@ import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kpct_radio_app_common/app/misc/utils.dart';
 import 'package:kpct_radio_app_common/models/converter/second_converter.dart';
+import 'package:kpct_radio_app_common/models/converter/gear_converter.dart';
+import 'package:kpct_radio_app_common/models/converter/string_converter.dart';
 import 'package:kpct_radio_app_common/models/converter/timestamp_converter.dart';
 import 'package:kpct_radio_app_common/models/remote/gear.dart';
 import 'package:kpct_radio_app_common/models/remote/shop_item.dart';
@@ -292,24 +294,67 @@ class InstalledEquipment with _$InstalledEquipment {
 
     // Gear
     @JsonKey(name: "gear_ID") required String gearId,
-    @JsonKey(name: "category") required GearCategory category,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    required GearCategory category,
     @JsonKey(name: "name") required String name,
     @JsonKey(name: "icon") required String icon,
-    @JsonKey(name: "tier") required GearTier tier,
-    @JsonKey(name: "socket_min") required int? socketMin,
-    @JsonKey(name: "socket_max") required int? socketMax,
-    @JsonKey(name: "staminaMax") @protected required int? staminaMax,
-    @JsonKey(name: "staminaUse") @protected required int? staminaUse,
-    @JsonKey(name: "luck_addrate") @protected required int? luckAddrate,
-    @JsonKey(name: "listeningEP") @protected required int? listeningEp,
-    @JsonKey(name: "listeningSSP") @protected required int? listeningSsp,
-    @JsonKey(name: "getEXP") @protected required int? getExp,
-    @JsonKey(name: "getEP_24hRate") @protected required int? getEp24HRate,
-    @JsonKey(name: "getSSP_24hRate") @protected required int? getSsp24HRate,
-    @JsonKey(name: "getSSP_Play") @protected required int? getSspPlay,
-    @JsonKey(name: "getEP_24hAmount") @protected required int? getEp24HAmount,
-    @JsonKey(name: "getSSP_24hAmount") @protected required int? getSsp24HAmount,
-    @JsonKey(name: "getSSP_PlayDelay") @protected required int? getSspPlayDelay,
+    @StringToGearTierConverter() @JsonKey(name: "tier") required GearTier tier,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_min")
+    required int? socketMin,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_max")
+    required int? socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    @protected
+    required int? staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    @protected
+    required int? staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    @protected
+    required int? luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    @protected
+    required int? listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    @protected
+    required int? listeningSsp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEXP")
+    @protected
+    required int? getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    @protected
+    required int? getEp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hRate")
+    @protected
+    required int? getSsp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    @protected
+    required int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    @protected
+    required int? getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    @protected
+    required int? getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    @protected
+    required int? getSspPlayDelay,
+    @StringToIntConverter()
     @JsonKey(name: "getSSP_PlayAmount")
     @protected
     required int? getSspPlayAmount,

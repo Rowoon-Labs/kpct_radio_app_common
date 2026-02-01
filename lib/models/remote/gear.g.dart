@@ -135,7 +135,9 @@ _$EquipmentImpl _$$EquipmentImplFromJson(Map<String, dynamic> json) =>
     _$EquipmentImpl(
       id: json['id'] as String,
       gearId: json['gearId'] as String,
-      category: $enumDecode(_$GearCategoryEnumMap, json['category']),
+      category: const StringToGearCategoryConverter().fromJson(
+        json['category'],
+      ),
       mounted: json['mounted'] as bool,
       sockets:
           (json['sockets'] as List<dynamic>)
@@ -143,14 +145,15 @@ _$EquipmentImpl _$$EquipmentImplFromJson(Map<String, dynamic> json) =>
               .toList(),
     );
 
-Map<String, dynamic> _$$EquipmentImplToJson(_$EquipmentImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'gearId': instance.gearId,
-      'category': _$GearCategoryEnumMap[instance.category]!,
-      'mounted': instance.mounted,
-      'sockets': instance.sockets.map((e) => e.toJson()).toList(),
-    };
+Map<String, dynamic> _$$EquipmentImplToJson(
+  _$EquipmentImpl instance,
+) => <String, dynamic>{
+  'id': instance.id,
+  'gearId': instance.gearId,
+  'category': const StringToGearCategoryConverter().toJson(instance.category),
+  'mounted': instance.mounted,
+  'sockets': instance.sockets.map((e) => e.toJson()).toList(),
+};
 
 const _$GearCategoryEnumMap = {
   GearCategory.radioSkin: 'Radio',

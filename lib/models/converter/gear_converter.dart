@@ -126,17 +126,17 @@ class StringToGearCategoryConverter
   dynamic toJson(GearCategory object) {
     switch (object) {
       case GearCategory.radioSkin:
-        return 1;
+        return 'Radio';
       case GearCategory.listeningGear:
-        return 2;
+        return 'LG';
       case GearCategory.accessory:
-        return 3;
+        return 'Accessory';
       case GearCategory.parts:
-        return 4;
+        return 'Parts';
       case GearCategory.gem:
-        return 5;
+        return 'Gem';
       case GearCategory.nft:
-        return 6;
+        return 'Ntf';
     }
   }
 }

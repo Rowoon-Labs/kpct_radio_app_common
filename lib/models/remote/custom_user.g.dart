@@ -171,25 +171,33 @@ _$InstalledEquipmentImpl _$$InstalledEquipmentImplFromJson(
           .map((e) => Socket.fromJson(e as Map<String, dynamic>))
           .toList(),
   gearId: json['gear_ID'] as String,
-  category: $enumDecode(_$GearCategoryEnumMap, json['category']),
+  category: const StringToGearCategoryConverter().fromJson(json['category']),
   name: json['name'] as String,
   icon: json['icon'] as String,
-  tier: $enumDecode(_$GearTierEnumMap, json['tier']),
-  socketMin: (json['socket_min'] as num?)?.toInt(),
-  socketMax: (json['socket_max'] as num?)?.toInt(),
-  staminaMax: (json['staminaMax'] as num?)?.toInt(),
-  staminaUse: (json['staminaUse'] as num?)?.toInt(),
-  luckAddrate: (json['luck_addrate'] as num?)?.toInt(),
-  listeningEp: (json['listeningEP'] as num?)?.toInt(),
-  listeningSsp: (json['listeningSSP'] as num?)?.toInt(),
-  getExp: (json['getEXP'] as num?)?.toInt(),
-  getEp24HRate: (json['getEP_24hRate'] as num?)?.toInt(),
-  getSsp24HRate: (json['getSSP_24hRate'] as num?)?.toInt(),
-  getSspPlay: (json['getSSP_Play'] as num?)?.toInt(),
-  getEp24HAmount: (json['getEP_24hAmount'] as num?)?.toInt(),
-  getSsp24HAmount: (json['getSSP_24hAmount'] as num?)?.toInt(),
-  getSspPlayDelay: (json['getSSP_PlayDelay'] as num?)?.toInt(),
-  getSspPlayAmount: (json['getSSP_PlayAmount'] as num?)?.toInt(),
+  tier: const StringToGearTierConverter().fromJson(json['tier']),
+  socketMin: const StringToIntConverter().fromJson(json['socket_min']),
+  socketMax: const StringToIntConverter().fromJson(json['socket_max']),
+  staminaMax: const StringToIntConverter().fromJson(json['staminaMax']),
+  staminaUse: const StringToIntConverter().fromJson(json['staminaUse']),
+  luckAddrate: const StringToIntConverter().fromJson(json['luck_addrate']),
+  listeningEp: const StringToIntConverter().fromJson(json['listeningEP']),
+  listeningSsp: const StringToIntConverter().fromJson(json['listeningSSP']),
+  getExp: const StringToIntConverter().fromJson(json['getEXP']),
+  getEp24HRate: const StringToIntConverter().fromJson(json['getEP_24hRate']),
+  getSsp24HRate: const StringToIntConverter().fromJson(json['getSSP_24hRate']),
+  getSspPlay: const StringToIntConverter().fromJson(json['getSSP_Play']),
+  getEp24HAmount: const StringToIntConverter().fromJson(
+    json['getEP_24hAmount'],
+  ),
+  getSsp24HAmount: const StringToIntConverter().fromJson(
+    json['getSSP_24hAmount'],
+  ),
+  getSspPlayDelay: const StringToIntConverter().fromJson(
+    json['getSSP_PlayDelay'],
+  ),
+  getSspPlayAmount: const StringToIntConverter().fromJson(
+    json['getSSP_PlayAmount'],
+  ),
 );
 
 Map<String, dynamic> _$$InstalledEquipmentImplToJson(
@@ -198,25 +206,70 @@ Map<String, dynamic> _$$InstalledEquipmentImplToJson(
   'equipmentId': instance.equipmentId,
   'sockets': instance.sockets,
   'gear_ID': instance.gearId,
-  'category': _$GearCategoryEnumMap[instance.category]!,
+  'category': const StringToGearCategoryConverter().toJson(instance.category),
   'name': instance.name,
   'icon': instance.icon,
-  'tier': _$GearTierEnumMap[instance.tier]!,
-  'socket_min': instance.socketMin,
-  'socket_max': instance.socketMax,
-  'staminaMax': instance.staminaMax,
-  'staminaUse': instance.staminaUse,
-  'luck_addrate': instance.luckAddrate,
-  'listeningEP': instance.listeningEp,
-  'listeningSSP': instance.listeningSsp,
-  'getEXP': instance.getExp,
-  'getEP_24hRate': instance.getEp24HRate,
-  'getSSP_24hRate': instance.getSsp24HRate,
-  'getSSP_Play': instance.getSspPlay,
-  'getEP_24hAmount': instance.getEp24HAmount,
-  'getSSP_24hAmount': instance.getSsp24HAmount,
-  'getSSP_PlayDelay': instance.getSspPlayDelay,
-  'getSSP_PlayAmount': instance.getSspPlayAmount,
+  'tier': const StringToGearTierConverter().toJson(instance.tier),
+  'socket_min': _$JsonConverterToJson<dynamic, int>(
+    instance.socketMin,
+    const StringToIntConverter().toJson,
+  ),
+  'socket_max': _$JsonConverterToJson<dynamic, int>(
+    instance.socketMax,
+    const StringToIntConverter().toJson,
+  ),
+  'staminaMax': _$JsonConverterToJson<dynamic, int>(
+    instance.staminaMax,
+    const StringToIntConverter().toJson,
+  ),
+  'staminaUse': _$JsonConverterToJson<dynamic, int>(
+    instance.staminaUse,
+    const StringToIntConverter().toJson,
+  ),
+  'luck_addrate': _$JsonConverterToJson<dynamic, int>(
+    instance.luckAddrate,
+    const StringToIntConverter().toJson,
+  ),
+  'listeningEP': _$JsonConverterToJson<dynamic, int>(
+    instance.listeningEp,
+    const StringToIntConverter().toJson,
+  ),
+  'listeningSSP': _$JsonConverterToJson<dynamic, int>(
+    instance.listeningSsp,
+    const StringToIntConverter().toJson,
+  ),
+  'getEXP': _$JsonConverterToJson<dynamic, int>(
+    instance.getExp,
+    const StringToIntConverter().toJson,
+  ),
+  'getEP_24hRate': _$JsonConverterToJson<dynamic, int>(
+    instance.getEp24HRate,
+    const StringToIntConverter().toJson,
+  ),
+  'getSSP_24hRate': _$JsonConverterToJson<dynamic, int>(
+    instance.getSsp24HRate,
+    const StringToIntConverter().toJson,
+  ),
+  'getSSP_Play': _$JsonConverterToJson<dynamic, int>(
+    instance.getSspPlay,
+    const StringToIntConverter().toJson,
+  ),
+  'getEP_24hAmount': _$JsonConverterToJson<dynamic, int>(
+    instance.getEp24HAmount,
+    const StringToIntConverter().toJson,
+  ),
+  'getSSP_24hAmount': _$JsonConverterToJson<dynamic, int>(
+    instance.getSsp24HAmount,
+    const StringToIntConverter().toJson,
+  ),
+  'getSSP_PlayDelay': _$JsonConverterToJson<dynamic, int>(
+    instance.getSspPlayDelay,
+    const StringToIntConverter().toJson,
+  ),
+  'getSSP_PlayAmount': _$JsonConverterToJson<dynamic, int>(
+    instance.getSspPlayAmount,
+    const StringToIntConverter().toJson,
+  ),
 };
 
 const _$GearTierEnumMap = {
