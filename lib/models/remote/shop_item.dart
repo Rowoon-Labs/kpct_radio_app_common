@@ -62,8 +62,11 @@ class ShopItem with _$ShopItem {
     final Item? item = user.items.firstWhereOrNull(
       (element) => (element.id == id),
     );
-    if ((item != null)) {
-      Duration? remainEffectiveDuration;
+
+    int todayBuyCount = 0;
+    Duration? remainEffectiveDuration;
+
+    if (item != null) {
       if (item.effectEndAt?.isAfter(now) == true) {
         remainEffectiveDuration = item.effectEndAt!.difference(now);
       }
@@ -71,33 +74,21 @@ class ShopItem with _$ShopItem {
       if ((item.lastBuyAt.year == now.year) &&
           (item.lastBuyAt.month == now.month) &&
           (item.lastBuyAt.day == now.day)) {
-        return AdjustedItem(
-          id: id,
-          exist: true,
-          now: now,
-          todayBuyCount: item.todayBuyCount,
-          canBuy: isBuyableCost && (item.todayBuyCount < buyLimit),
-          remainEffectiveDuration: remainEffectiveDuration,
-        );
-      } else {
-        return AdjustedItem(
-          id: id,
-          exist: true,
-          now: now,
-          todayBuyCount: 0,
-          canBuy: isBuyableCost,
-          remainEffectiveDuration: remainEffectiveDuration,
-        );
+        todayBuyCount = item.todayBuyCount;
       }
-    } else {
-      return AdjustedItem(
-        id: id,
-        exist: false,
-        now: now,
-        todayBuyCount: 0,
-        canBuy: isBuyableCost,
-      );
     }
+
+    final bool isLimitReached = todayBuyCount >= buyLimit;
+
+    return AdjustedItem(
+      id: id,
+      exist: item != null,
+      now: now,
+      todayBuyCount: todayBuyCount,
+      canBuy: isBuyableCost && !isLimitReached,
+      isLimitReached: isLimitReached,
+      remainEffectiveDuration: remainEffectiveDuration,
+    );
   }
 
   static Map<String, Object?> toFirestore(
@@ -114,6 +105,7 @@ class AdjustedItem with _$AdjustedItem {
     required ShopItemId id,
     required bool exist,
     required bool canBuy,
+    required bool isLimitReached,
     required DateTime now,
     required int todayBuyCount,
     @SecondConverterFromStringNullable() Duration? remainEffectiveDuration,

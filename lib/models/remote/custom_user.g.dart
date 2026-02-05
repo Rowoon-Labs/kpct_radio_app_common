@@ -53,6 +53,10 @@ _$CustomUserImpl _$$CustomUserImplFromJson(Map<String, dynamic> json) =>
         json['nextPeriodic24'],
         const TimestampConverter().fromJson,
       ),
+      lastGaugeDecreaseAt: _$JsonConverterFromJson<Timestamp, DateTime>(
+        json['lastGaugeDecreaseAt'],
+        const TimestampConverter().fromJson,
+      ),
       overcomeLevels:
           (json['overcomeLevels'] as List<dynamic>)
               .map((e) => (e as num).toInt())
@@ -100,6 +104,10 @@ Map<String, dynamic> _$$CustomUserImplToJson(_$CustomUserImpl instance) =>
       ),
       'nextPeriodic24': _$JsonConverterToJson<Timestamp, DateTime>(
         instance.nextPeriodic24,
+        const TimestampConverter().toJson,
+      ),
+      'lastGaugeDecreaseAt': _$JsonConverterToJson<Timestamp, DateTime>(
+        instance.lastGaugeDecreaseAt,
         const TimestampConverter().toJson,
       ),
       'overcomeLevels': instance.overcomeLevels,
@@ -270,14 +278,4 @@ Map<String, dynamic> _$$InstalledEquipmentImplToJson(
     instance.getSspPlayAmount,
     const StringToIntConverter().toJson,
   ),
-};
-
-const _$GearTierEnumMap = {
-  GearTier.one: 1,
-  GearTier.two: 2,
-  GearTier.three: 3,
-  GearTier.four: 4,
-  GearTier.five: 5,
-  GearTier.six: 6,
-  GearTier.seven: 7,
 };

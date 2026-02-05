@@ -434,6 +434,7 @@ mixin _$AdjustedItem {
   ShopItemId get id => throw _privateConstructorUsedError;
   bool get exist => throw _privateConstructorUsedError;
   bool get canBuy => throw _privateConstructorUsedError;
+  bool get isLimitReached => throw _privateConstructorUsedError;
   DateTime get now => throw _privateConstructorUsedError;
   int get todayBuyCount => throw _privateConstructorUsedError;
   @SecondConverterFromStringNullable()
@@ -457,6 +458,7 @@ abstract class $AdjustedItemCopyWith<$Res> {
     ShopItemId id,
     bool exist,
     bool canBuy,
+    bool isLimitReached,
     DateTime now,
     int todayBuyCount,
     @SecondConverterFromStringNullable() Duration? remainEffectiveDuration,
@@ -481,6 +483,7 @@ class _$AdjustedItemCopyWithImpl<$Res, $Val extends AdjustedItem>
     Object? id = null,
     Object? exist = null,
     Object? canBuy = null,
+    Object? isLimitReached = null,
     Object? now = null,
     Object? todayBuyCount = null,
     Object? remainEffectiveDuration = freezed,
@@ -501,6 +504,11 @@ class _$AdjustedItemCopyWithImpl<$Res, $Val extends AdjustedItem>
                 null == canBuy
                     ? _value.canBuy
                     : canBuy // ignore: cast_nullable_to_non_nullable
+                        as bool,
+            isLimitReached:
+                null == isLimitReached
+                    ? _value.isLimitReached
+                    : isLimitReached // ignore: cast_nullable_to_non_nullable
                         as bool,
             now:
                 null == now
@@ -536,6 +544,7 @@ abstract class _$$AdjustedItemImplCopyWith<$Res>
     ShopItemId id,
     bool exist,
     bool canBuy,
+    bool isLimitReached,
     DateTime now,
     int todayBuyCount,
     @SecondConverterFromStringNullable() Duration? remainEffectiveDuration,
@@ -559,6 +568,7 @@ class __$$AdjustedItemImplCopyWithImpl<$Res>
     Object? id = null,
     Object? exist = null,
     Object? canBuy = null,
+    Object? isLimitReached = null,
     Object? now = null,
     Object? todayBuyCount = null,
     Object? remainEffectiveDuration = freezed,
@@ -579,6 +589,11 @@ class __$$AdjustedItemImplCopyWithImpl<$Res>
             null == canBuy
                 ? _value.canBuy
                 : canBuy // ignore: cast_nullable_to_non_nullable
+                    as bool,
+        isLimitReached:
+            null == isLimitReached
+                ? _value.isLimitReached
+                : isLimitReached // ignore: cast_nullable_to_non_nullable
                     as bool,
         now:
             null == now
@@ -607,6 +622,7 @@ class _$AdjustedItemImpl extends _AdjustedItem {
     required this.id,
     required this.exist,
     required this.canBuy,
+    required this.isLimitReached,
     required this.now,
     required this.todayBuyCount,
     @SecondConverterFromStringNullable() this.remainEffectiveDuration,
@@ -619,6 +635,8 @@ class _$AdjustedItemImpl extends _AdjustedItem {
   @override
   final bool canBuy;
   @override
+  final bool isLimitReached;
+  @override
   final DateTime now;
   @override
   final int todayBuyCount;
@@ -628,7 +646,7 @@ class _$AdjustedItemImpl extends _AdjustedItem {
 
   @override
   String toString() {
-    return 'AdjustedItem(id: $id, exist: $exist, canBuy: $canBuy, now: $now, todayBuyCount: $todayBuyCount, remainEffectiveDuration: $remainEffectiveDuration)';
+    return 'AdjustedItem(id: $id, exist: $exist, canBuy: $canBuy, isLimitReached: $isLimitReached, now: $now, todayBuyCount: $todayBuyCount, remainEffectiveDuration: $remainEffectiveDuration)';
   }
 
   @override
@@ -639,6 +657,8 @@ class _$AdjustedItemImpl extends _AdjustedItem {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.exist, exist) || other.exist == exist) &&
             (identical(other.canBuy, canBuy) || other.canBuy == canBuy) &&
+            (identical(other.isLimitReached, isLimitReached) ||
+                other.isLimitReached == isLimitReached) &&
             (identical(other.now, now) || other.now == now) &&
             (identical(other.todayBuyCount, todayBuyCount) ||
                 other.todayBuyCount == todayBuyCount) &&
@@ -655,6 +675,7 @@ class _$AdjustedItemImpl extends _AdjustedItem {
     id,
     exist,
     canBuy,
+    isLimitReached,
     now,
     todayBuyCount,
     remainEffectiveDuration,
@@ -674,6 +695,7 @@ abstract class _AdjustedItem extends AdjustedItem {
     required final ShopItemId id,
     required final bool exist,
     required final bool canBuy,
+    required final bool isLimitReached,
     required final DateTime now,
     required final int todayBuyCount,
     @SecondConverterFromStringNullable()
@@ -687,6 +709,8 @@ abstract class _AdjustedItem extends AdjustedItem {
   bool get exist;
   @override
   bool get canBuy;
+  @override
+  bool get isLimitReached;
   @override
   DateTime get now;
   @override

@@ -49,6 +49,7 @@ class CustomUser with _$CustomUser {
     @TimestampConverter() required DateTime nextRandomBoxAt,
     @TimestampConverter() required DateTime? nextPeriodic12,
     @TimestampConverter() required DateTime? nextPeriodic24,
+    @TimestampConverter() DateTime? lastGaugeDecreaseAt,
     required List<int> overcomeLevels,
     required List<Item> items,
   }) = _CustomUser;
@@ -70,6 +71,8 @@ class CustomUser with _$CustomUser {
   ) => object.toJson();
 
   bool get canOpenRandomBox => koreaNow().isAfter(nextRandomBoxAt);
+
+  bool get inListeningGaugeFreeze => _inItemEffect(ShopItemId.shopItem03);
 
   bool _inItemEffect(ShopItemId id) {
     final Item? item = items.firstWhereOrNull((element) => (element.id == id));

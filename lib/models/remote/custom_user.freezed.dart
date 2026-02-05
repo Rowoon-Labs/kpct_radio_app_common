@@ -53,6 +53,8 @@ mixin _$CustomUser {
   DateTime? get nextPeriodic12 => throw _privateConstructorUsedError;
   @TimestampConverter()
   DateTime? get nextPeriodic24 => throw _privateConstructorUsedError;
+  @TimestampConverter()
+  DateTime? get lastGaugeDecreaseAt => throw _privateConstructorUsedError;
   List<int> get overcomeLevels => throw _privateConstructorUsedError;
   List<Item> get items => throw _privateConstructorUsedError;
 
@@ -99,6 +101,7 @@ abstract class $CustomUserCopyWith<$Res> {
     @TimestampConverter() DateTime nextRandomBoxAt,
     @TimestampConverter() DateTime? nextPeriodic12,
     @TimestampConverter() DateTime? nextPeriodic24,
+    @TimestampConverter() DateTime? lastGaugeDecreaseAt,
     List<int> overcomeLevels,
     List<Item> items,
   });
@@ -144,6 +147,7 @@ class _$CustomUserCopyWithImpl<$Res, $Val extends CustomUser>
     Object? nextRandomBoxAt = null,
     Object? nextPeriodic12 = freezed,
     Object? nextPeriodic24 = freezed,
+    Object? lastGaugeDecreaseAt = freezed,
     Object? overcomeLevels = null,
     Object? items = null,
   }) {
@@ -274,6 +278,11 @@ class _$CustomUserCopyWithImpl<$Res, $Val extends CustomUser>
                     ? _value.nextPeriodic24
                     : nextPeriodic24 // ignore: cast_nullable_to_non_nullable
                         as DateTime?,
+            lastGaugeDecreaseAt:
+                freezed == lastGaugeDecreaseAt
+                    ? _value.lastGaugeDecreaseAt
+                    : lastGaugeDecreaseAt // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
             overcomeLevels:
                 null == overcomeLevels
                     ? _value.overcomeLevels
@@ -325,6 +334,7 @@ abstract class _$$CustomUserImplCopyWith<$Res>
     @TimestampConverter() DateTime nextRandomBoxAt,
     @TimestampConverter() DateTime? nextPeriodic12,
     @TimestampConverter() DateTime? nextPeriodic24,
+    @TimestampConverter() DateTime? lastGaugeDecreaseAt,
     List<int> overcomeLevels,
     List<Item> items,
   });
@@ -369,6 +379,7 @@ class __$$CustomUserImplCopyWithImpl<$Res>
     Object? nextRandomBoxAt = null,
     Object? nextPeriodic12 = freezed,
     Object? nextPeriodic24 = freezed,
+    Object? lastGaugeDecreaseAt = freezed,
     Object? overcomeLevels = null,
     Object? items = null,
   }) {
@@ -499,6 +510,11 @@ class __$$CustomUserImplCopyWithImpl<$Res>
                 ? _value.nextPeriodic24
                 : nextPeriodic24 // ignore: cast_nullable_to_non_nullable
                     as DateTime?,
+        lastGaugeDecreaseAt:
+            freezed == lastGaugeDecreaseAt
+                ? _value.lastGaugeDecreaseAt
+                : lastGaugeDecreaseAt // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
         overcomeLevels:
             null == overcomeLevels
                 ? _value._overcomeLevels
@@ -543,6 +559,7 @@ class _$CustomUserImpl extends _CustomUser {
     @TimestampConverter() required this.nextRandomBoxAt,
     @TimestampConverter() required this.nextPeriodic12,
     @TimestampConverter() required this.nextPeriodic24,
+    @TimestampConverter() this.lastGaugeDecreaseAt,
     required final List<int> overcomeLevels,
     required final List<Item> items,
   }) : _installedEquipments = installedEquipments,
@@ -616,6 +633,9 @@ class _$CustomUserImpl extends _CustomUser {
   @override
   @TimestampConverter()
   final DateTime? nextPeriodic24;
+  @override
+  @TimestampConverter()
+  final DateTime? lastGaugeDecreaseAt;
   final List<int> _overcomeLevels;
   @override
   List<int> get overcomeLevels {
@@ -634,7 +654,7 @@ class _$CustomUserImpl extends _CustomUser {
 
   @override
   String toString() {
-    return 'CustomUser(id: $id, bonded: $bonded, role: $role, profileImageUrl: $profileImageUrl, email: $email, createdAt: $createdAt, walletAddress: $walletAddress, level: $level, stamina: $stamina, maxStamina: $maxStamina, consumedStamina: $consumedStamina, exp: $exp, maxExp: $maxExp, listeningGauge: $listeningGauge, ep: $ep, accumulatedEp: $accumulatedEp, accumulatedPlayDuration: $accumulatedPlayDuration, radioSsp: $radioSsp, accumulatedRadioSsp: $accumulatedRadioSsp, hodSsp: $hodSsp, referralCode: $referralCode, installedEquipments: $installedEquipments, nextRandomBoxAt: $nextRandomBoxAt, nextPeriodic12: $nextPeriodic12, nextPeriodic24: $nextPeriodic24, overcomeLevels: $overcomeLevels, items: $items)';
+    return 'CustomUser(id: $id, bonded: $bonded, role: $role, profileImageUrl: $profileImageUrl, email: $email, createdAt: $createdAt, walletAddress: $walletAddress, level: $level, stamina: $stamina, maxStamina: $maxStamina, consumedStamina: $consumedStamina, exp: $exp, maxExp: $maxExp, listeningGauge: $listeningGauge, ep: $ep, accumulatedEp: $accumulatedEp, accumulatedPlayDuration: $accumulatedPlayDuration, radioSsp: $radioSsp, accumulatedRadioSsp: $accumulatedRadioSsp, hodSsp: $hodSsp, referralCode: $referralCode, installedEquipments: $installedEquipments, nextRandomBoxAt: $nextRandomBoxAt, nextPeriodic12: $nextPeriodic12, nextPeriodic24: $nextPeriodic24, lastGaugeDecreaseAt: $lastGaugeDecreaseAt, overcomeLevels: $overcomeLevels, items: $items)';
   }
 
   @override
@@ -687,6 +707,8 @@ class _$CustomUserImpl extends _CustomUser {
                 other.nextPeriodic12 == nextPeriodic12) &&
             (identical(other.nextPeriodic24, nextPeriodic24) ||
                 other.nextPeriodic24 == nextPeriodic24) &&
+            (identical(other.lastGaugeDecreaseAt, lastGaugeDecreaseAt) ||
+                other.lastGaugeDecreaseAt == lastGaugeDecreaseAt) &&
             const DeepCollectionEquality().equals(
               other._overcomeLevels,
               _overcomeLevels,
@@ -723,6 +745,7 @@ class _$CustomUserImpl extends _CustomUser {
     nextRandomBoxAt,
     nextPeriodic12,
     nextPeriodic24,
+    lastGaugeDecreaseAt,
     const DeepCollectionEquality().hash(_overcomeLevels),
     const DeepCollectionEquality().hash(_items),
   ]);
@@ -768,6 +791,7 @@ abstract class _CustomUser extends CustomUser {
     @TimestampConverter() required final DateTime nextRandomBoxAt,
     @TimestampConverter() required final DateTime? nextPeriodic12,
     @TimestampConverter() required final DateTime? nextPeriodic24,
+    @TimestampConverter() final DateTime? lastGaugeDecreaseAt,
     required final List<int> overcomeLevels,
     required final List<Item> items,
   }) = _$CustomUserImpl;
@@ -832,6 +856,9 @@ abstract class _CustomUser extends CustomUser {
   @override
   @TimestampConverter()
   DateTime? get nextPeriodic24;
+  @override
+  @TimestampConverter()
+  DateTime? get lastGaugeDecreaseAt;
   @override
   List<int> get overcomeLevels;
   @override
@@ -1094,54 +1121,71 @@ mixin _$InstalledEquipment {
   List<Socket> get sockets => throw _privateConstructorUsedError; // Gear
   @JsonKey(name: "gear_ID")
   String get gearId => throw _privateConstructorUsedError;
+  @StringToGearCategoryConverter()
   @JsonKey(name: "category")
   GearCategory get category => throw _privateConstructorUsedError;
   @JsonKey(name: "name")
   String get name => throw _privateConstructorUsedError;
   @JsonKey(name: "icon")
   String get icon => throw _privateConstructorUsedError;
+  @StringToGearTierConverter()
   @JsonKey(name: "tier")
   GearTier get tier => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "socket_min")
   int? get socketMin => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "socket_max")
   int? get socketMax => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "staminaMax")
   @protected
   int? get staminaMax => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "staminaUse")
   @protected
   int? get staminaUse => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "luck_addrate")
   @protected
   int? get luckAddrate => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "listeningEP")
   @protected
   int? get listeningEp => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "listeningSSP")
   @protected
   int? get listeningSsp => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getEXP")
   @protected
   int? get getExp => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getEP_24hRate")
   @protected
   int? get getEp24HRate => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_24hRate")
   @protected
   int? get getSsp24HRate => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_Play")
   @protected
   int? get getSspPlay => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getEP_24hAmount")
   @protected
   int? get getEp24HAmount => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_24hAmount")
   @protected
   int? get getSsp24HAmount => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_PlayDelay")
   @protected
   int? get getSspPlayDelay => throw _privateConstructorUsedError;
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_PlayAmount")
   @protected
   int? get getSspPlayAmount => throw _privateConstructorUsedError;
@@ -1167,25 +1211,63 @@ abstract class $InstalledEquipmentCopyWith<$Res> {
     @JsonKey(name: "equipmentId") String equipmentId,
     @JsonKey(name: "sockets") List<Socket> sockets,
     @JsonKey(name: "gear_ID") String gearId,
-    @JsonKey(name: "category") GearCategory category,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    GearCategory category,
     @JsonKey(name: "name") String name,
     @JsonKey(name: "icon") String icon,
-    @JsonKey(name: "tier") GearTier tier,
-    @JsonKey(name: "socket_min") int? socketMin,
-    @JsonKey(name: "socket_max") int? socketMax,
-    @JsonKey(name: "staminaMax") @protected int? staminaMax,
-    @JsonKey(name: "staminaUse") @protected int? staminaUse,
-    @JsonKey(name: "luck_addrate") @protected int? luckAddrate,
-    @JsonKey(name: "listeningEP") @protected int? listeningEp,
-    @JsonKey(name: "listeningSSP") @protected int? listeningSsp,
-    @JsonKey(name: "getEXP") @protected int? getExp,
-    @JsonKey(name: "getEP_24hRate") @protected int? getEp24HRate,
-    @JsonKey(name: "getSSP_24hRate") @protected int? getSsp24HRate,
-    @JsonKey(name: "getSSP_Play") @protected int? getSspPlay,
-    @JsonKey(name: "getEP_24hAmount") @protected int? getEp24HAmount,
-    @JsonKey(name: "getSSP_24hAmount") @protected int? getSsp24HAmount,
-    @JsonKey(name: "getSSP_PlayDelay") @protected int? getSspPlayDelay,
-    @JsonKey(name: "getSSP_PlayAmount") @protected int? getSspPlayAmount,
+    @StringToGearTierConverter() @JsonKey(name: "tier") GearTier tier,
+    @StringToIntConverter() @JsonKey(name: "socket_min") int? socketMin,
+    @StringToIntConverter() @JsonKey(name: "socket_max") int? socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    @protected
+    int? staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    @protected
+    int? staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    @protected
+    int? luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    @protected
+    int? listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    @protected
+    int? listeningSsp,
+    @StringToIntConverter() @JsonKey(name: "getEXP") @protected int? getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    @protected
+    int? getEp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hRate")
+    @protected
+    int? getSsp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    @protected
+    int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    @protected
+    int? getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    @protected
+    int? getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    @protected
+    int? getSspPlayDelay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayAmount")
+    @protected
+    int? getSspPlayAmount,
   });
 }
 
@@ -1358,25 +1440,63 @@ abstract class _$$InstalledEquipmentImplCopyWith<$Res>
     @JsonKey(name: "equipmentId") String equipmentId,
     @JsonKey(name: "sockets") List<Socket> sockets,
     @JsonKey(name: "gear_ID") String gearId,
-    @JsonKey(name: "category") GearCategory category,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    GearCategory category,
     @JsonKey(name: "name") String name,
     @JsonKey(name: "icon") String icon,
-    @JsonKey(name: "tier") GearTier tier,
-    @JsonKey(name: "socket_min") int? socketMin,
-    @JsonKey(name: "socket_max") int? socketMax,
-    @JsonKey(name: "staminaMax") @protected int? staminaMax,
-    @JsonKey(name: "staminaUse") @protected int? staminaUse,
-    @JsonKey(name: "luck_addrate") @protected int? luckAddrate,
-    @JsonKey(name: "listeningEP") @protected int? listeningEp,
-    @JsonKey(name: "listeningSSP") @protected int? listeningSsp,
-    @JsonKey(name: "getEXP") @protected int? getExp,
-    @JsonKey(name: "getEP_24hRate") @protected int? getEp24HRate,
-    @JsonKey(name: "getSSP_24hRate") @protected int? getSsp24HRate,
-    @JsonKey(name: "getSSP_Play") @protected int? getSspPlay,
-    @JsonKey(name: "getEP_24hAmount") @protected int? getEp24HAmount,
-    @JsonKey(name: "getSSP_24hAmount") @protected int? getSsp24HAmount,
-    @JsonKey(name: "getSSP_PlayDelay") @protected int? getSspPlayDelay,
-    @JsonKey(name: "getSSP_PlayAmount") @protected int? getSspPlayAmount,
+    @StringToGearTierConverter() @JsonKey(name: "tier") GearTier tier,
+    @StringToIntConverter() @JsonKey(name: "socket_min") int? socketMin,
+    @StringToIntConverter() @JsonKey(name: "socket_max") int? socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    @protected
+    int? staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    @protected
+    int? staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    @protected
+    int? luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    @protected
+    int? listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    @protected
+    int? listeningSsp,
+    @StringToIntConverter() @JsonKey(name: "getEXP") @protected int? getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    @protected
+    int? getEp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hRate")
+    @protected
+    int? getSsp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    @protected
+    int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    @protected
+    int? getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    @protected
+    int? getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    @protected
+    int? getSspPlayDelay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayAmount")
+    @protected
+    int? getSspPlayAmount,
   });
 }
 
@@ -1541,24 +1661,67 @@ class _$InstalledEquipmentImpl extends _InstalledEquipment {
     @JsonKey(name: "equipmentId") required this.equipmentId,
     @JsonKey(name: "sockets") required final List<Socket> sockets,
     @JsonKey(name: "gear_ID") required this.gearId,
-    @JsonKey(name: "category") required this.category,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    required this.category,
     @JsonKey(name: "name") required this.name,
     @JsonKey(name: "icon") required this.icon,
-    @JsonKey(name: "tier") required this.tier,
-    @JsonKey(name: "socket_min") required this.socketMin,
-    @JsonKey(name: "socket_max") required this.socketMax,
-    @JsonKey(name: "staminaMax") @protected required this.staminaMax,
-    @JsonKey(name: "staminaUse") @protected required this.staminaUse,
-    @JsonKey(name: "luck_addrate") @protected required this.luckAddrate,
-    @JsonKey(name: "listeningEP") @protected required this.listeningEp,
-    @JsonKey(name: "listeningSSP") @protected required this.listeningSsp,
-    @JsonKey(name: "getEXP") @protected required this.getExp,
-    @JsonKey(name: "getEP_24hRate") @protected required this.getEp24HRate,
-    @JsonKey(name: "getSSP_24hRate") @protected required this.getSsp24HRate,
-    @JsonKey(name: "getSSP_Play") @protected required this.getSspPlay,
-    @JsonKey(name: "getEP_24hAmount") @protected required this.getEp24HAmount,
-    @JsonKey(name: "getSSP_24hAmount") @protected required this.getSsp24HAmount,
-    @JsonKey(name: "getSSP_PlayDelay") @protected required this.getSspPlayDelay,
+    @StringToGearTierConverter() @JsonKey(name: "tier") required this.tier,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_min")
+    required this.socketMin,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_max")
+    required this.socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    @protected
+    required this.staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    @protected
+    required this.staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    @protected
+    required this.luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    @protected
+    required this.listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    @protected
+    required this.listeningSsp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEXP")
+    @protected
+    required this.getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    @protected
+    required this.getEp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hRate")
+    @protected
+    required this.getSsp24HRate,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    @protected
+    required this.getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hAmount")
+    @protected
+    required this.getEp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_24hAmount")
+    @protected
+    required this.getSsp24HAmount,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_PlayDelay")
+    @protected
+    required this.getSspPlayDelay,
+    @StringToIntConverter()
     @JsonKey(name: "getSSP_PlayAmount")
     @protected
     required this.getSspPlayAmount,
@@ -1586,6 +1749,7 @@ class _$InstalledEquipmentImpl extends _InstalledEquipment {
   @JsonKey(name: "gear_ID")
   final String gearId;
   @override
+  @StringToGearCategoryConverter()
   @JsonKey(name: "category")
   final GearCategory category;
   @override
@@ -1595,63 +1759,79 @@ class _$InstalledEquipmentImpl extends _InstalledEquipment {
   @JsonKey(name: "icon")
   final String icon;
   @override
+  @StringToGearTierConverter()
   @JsonKey(name: "tier")
   final GearTier tier;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "socket_min")
   final int? socketMin;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "socket_max")
   final int? socketMax;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "staminaMax")
   @protected
   final int? staminaMax;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "staminaUse")
   @protected
   final int? staminaUse;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "luck_addrate")
   @protected
   final int? luckAddrate;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "listeningEP")
   @protected
   final int? listeningEp;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "listeningSSP")
   @protected
   final int? listeningSsp;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getEXP")
   @protected
   final int? getExp;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getEP_24hRate")
   @protected
   final int? getEp24HRate;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_24hRate")
   @protected
   final int? getSsp24HRate;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_Play")
   @protected
   final int? getSspPlay;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getEP_24hAmount")
   @protected
   final int? getEp24HAmount;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_24hAmount")
   @protected
   final int? getSsp24HAmount;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_PlayDelay")
   @protected
   final int? getSspPlayDelay;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_PlayAmount")
   @protected
   final int? getSspPlayAmount;
@@ -1756,32 +1936,69 @@ abstract class _InstalledEquipment extends InstalledEquipment {
     @JsonKey(name: "equipmentId") required final String equipmentId,
     @JsonKey(name: "sockets") required final List<Socket> sockets,
     @JsonKey(name: "gear_ID") required final String gearId,
-    @JsonKey(name: "category") required final GearCategory category,
+    @StringToGearCategoryConverter()
+    @JsonKey(name: "category")
+    required final GearCategory category,
     @JsonKey(name: "name") required final String name,
     @JsonKey(name: "icon") required final String icon,
-    @JsonKey(name: "tier") required final GearTier tier,
-    @JsonKey(name: "socket_min") required final int? socketMin,
-    @JsonKey(name: "socket_max") required final int? socketMax,
-    @JsonKey(name: "staminaMax") @protected required final int? staminaMax,
-    @JsonKey(name: "staminaUse") @protected required final int? staminaUse,
-    @JsonKey(name: "luck_addrate") @protected required final int? luckAddrate,
-    @JsonKey(name: "listeningEP") @protected required final int? listeningEp,
-    @JsonKey(name: "listeningSSP") @protected required final int? listeningSsp,
-    @JsonKey(name: "getEXP") @protected required final int? getExp,
-    @JsonKey(name: "getEP_24hRate") @protected required final int? getEp24HRate,
+    @StringToGearTierConverter()
+    @JsonKey(name: "tier")
+    required final GearTier tier,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_min")
+    required final int? socketMin,
+    @StringToIntConverter()
+    @JsonKey(name: "socket_max")
+    required final int? socketMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaMax")
+    @protected
+    required final int? staminaMax,
+    @StringToIntConverter()
+    @JsonKey(name: "staminaUse")
+    @protected
+    required final int? staminaUse,
+    @StringToIntConverter()
+    @JsonKey(name: "luck_addrate")
+    @protected
+    required final int? luckAddrate,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningEP")
+    @protected
+    required final int? listeningEp,
+    @StringToIntConverter()
+    @JsonKey(name: "listeningSSP")
+    @protected
+    required final int? listeningSsp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEXP")
+    @protected
+    required final int? getExp,
+    @StringToIntConverter()
+    @JsonKey(name: "getEP_24hRate")
+    @protected
+    required final int? getEp24HRate,
+    @StringToIntConverter()
     @JsonKey(name: "getSSP_24hRate")
     @protected
     required final int? getSsp24HRate,
-    @JsonKey(name: "getSSP_Play") @protected required final int? getSspPlay,
+    @StringToIntConverter()
+    @JsonKey(name: "getSSP_Play")
+    @protected
+    required final int? getSspPlay,
+    @StringToIntConverter()
     @JsonKey(name: "getEP_24hAmount")
     @protected
     required final int? getEp24HAmount,
+    @StringToIntConverter()
     @JsonKey(name: "getSSP_24hAmount")
     @protected
     required final int? getSsp24HAmount,
+    @StringToIntConverter()
     @JsonKey(name: "getSSP_PlayDelay")
     @protected
     required final int? getSspPlayDelay,
+    @StringToIntConverter()
     @JsonKey(name: "getSSP_PlayAmount")
     @protected
     required final int? getSspPlayAmount,
@@ -1802,6 +2019,7 @@ abstract class _InstalledEquipment extends InstalledEquipment {
   @JsonKey(name: "gear_ID")
   String get gearId;
   @override
+  @StringToGearCategoryConverter()
   @JsonKey(name: "category")
   GearCategory get category;
   @override
@@ -1811,63 +2029,79 @@ abstract class _InstalledEquipment extends InstalledEquipment {
   @JsonKey(name: "icon")
   String get icon;
   @override
+  @StringToGearTierConverter()
   @JsonKey(name: "tier")
   GearTier get tier;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "socket_min")
   int? get socketMin;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "socket_max")
   int? get socketMax;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "staminaMax")
   @protected
   int? get staminaMax;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "staminaUse")
   @protected
   int? get staminaUse;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "luck_addrate")
   @protected
   int? get luckAddrate;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "listeningEP")
   @protected
   int? get listeningEp;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "listeningSSP")
   @protected
   int? get listeningSsp;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getEXP")
   @protected
   int? get getExp;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getEP_24hRate")
   @protected
   int? get getEp24HRate;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_24hRate")
   @protected
   int? get getSsp24HRate;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_Play")
   @protected
   int? get getSspPlay;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getEP_24hAmount")
   @protected
   int? get getEp24HAmount;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_24hAmount")
   @protected
   int? get getSsp24HAmount;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_PlayDelay")
   @protected
   int? get getSspPlayDelay;
   @override
+  @StringToIntConverter()
   @JsonKey(name: "getSSP_PlayAmount")
   @protected
   int? get getSspPlayAmount;
